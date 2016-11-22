@@ -4,6 +4,7 @@
 import pandas as pd
 import csv
 import matplotlib.pyplot as plt
+from urllib.parse import urlparse
 
 
 DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
@@ -35,6 +36,16 @@ def produce_count_and_na(df, colname):
     """
     return df[colname].value_counts(dropna = False)
 
+def extract_URL_netloc(list):
+    """
+    Takes a list of URLs, then extracts the main domain part (the 'netloc')
+    :params: a data frame and a column name in the dataframe
+    :return: a list of URL netlocs
+    """
+    
+    return 
+
+
 def import_csv_to_dict(filename):
     """
     Importing csv into Python
@@ -65,7 +76,9 @@ def main():
 #   Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME)
 
-    print(df.columns)
+#    print(df.columns)
+
+
 
     """
     Need to count the unique values in columns to get summaries of the data
@@ -74,15 +87,24 @@ def main():
     """
     open_source_licence = produce_count_and_na(df,'Open Source?')
     universities = produce_count_and_na(df,'RO')
-    print(open_source_licence)
+#   print(open_source_licence)
 #    print(universities)
 
-    print(df.count())
-    print(len(df.index))
-    
+#   How many URLs are provided (need to find df length then subtract non_na count of URL column)
+    missing_URLs = len(df) - df['URL'].count()
 
-    
+#    parsed = urlparse('http://netloc/path;parameters?query=argument#fragment')
+#    print(parsed.netloc)
+#    print(urls)
 
+#    urls = df['URL']
+#    cleaned_urls = urls[urls.URL.notnull()]
+#    for i in urls:
+#        print(i)
+#        current_url = urlparse(i)
+#        print(current_url)
+
+    print(cleaned_urls)
 
 if __name__ == '__main__':
     main()
