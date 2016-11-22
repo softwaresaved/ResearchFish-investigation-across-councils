@@ -30,7 +30,15 @@ def convert_to_df(dict_list):
     """
     return pd.DataFrame(dict_list)
 
-
+def drop_column(df, columnname):
+    """
+    Drops unneeded column from dataframe
+    :params: a dataframe and the unneeded column
+    :return: a dataframe without the column
+    Note the 1 in the function denotes columns
+    rather than 0 used to drop rows
+    """
+    return df.drop(columnname,1)
 
 def main():
     """
@@ -38,8 +46,9 @@ def main():
     """
     dict_data = import_csv_to_dict(DATAFILENAME)
     df = convert_to_df(dict_data)
-    df = drop_column(df, 'None') ## Dropping the column
-
+    print(df.columns)
+    df = drop_column(df, None)
+    print(df.columns)
 
 if __name__ == '__main__':
     main()
