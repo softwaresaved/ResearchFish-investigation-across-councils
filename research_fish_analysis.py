@@ -30,12 +30,13 @@ def convert_to_df(dict_list):
     """
     return pd.DataFrame(dict_list)
 
-def main();
+def main():
     """
     Main function to run program
     """
-    dict_data = import_csv(DATAFILENAME)
-    convert_to_df
+    dict_data = import_csv_to_dict(DATAFILENAME)
+    df = convert_to_df(dict_data)
+    print(df)
 
 
 if __name__ == '__main__':
