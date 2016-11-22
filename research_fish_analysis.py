@@ -21,7 +21,7 @@ def import_xls_to_df(filename):
 def produce_count(df, colname):
     """
     When given a column, returns a count of its unique values
-    This DOES NOT count blank entries - see produce_count_and_na
+    This DOES NOT count blank entries - unlike produce_count_and_na()
     :params: a data frame and a column name in the dataframe
     :return: a table of unique names and their count
     """
@@ -30,20 +30,33 @@ def produce_count(df, colname):
 def produce_count_and_na(df, colname):
     """
     When given a column, returns a count of its unique values
-    This also counts blank entries
+    This ALSO DOES count blank entries - unlike produce_count()
     :params: a data frame and a column name in the dataframe
     :return: a table of unique names and their count
     """
     return df[colname].value_counts(dropna = False)
 
-def extract_URL_netloc(list):
+def get_root_domains(df,colname):
     """
-    Takes a list of URLs, then extracts the main domain part (the 'netloc')
+    Takes a df and a column in it which contains urls, then extracts the main domain part (the 'netloc')
+    of the url and writes the results into a new df
     :params: a data frame and a column name in the dataframe
-    :return: a list of URL netlocs
+    :return: a df of URL netlocs
     """
+    list_of_rootdomains = list()
     
-    return 
+#   Take the colname column of df, strip out the nans (which break urlparser) and add it to urls
+    urls = df[colname].dropna()
+
+#   User urlparse() to strip out the rootdomain (i.e, netloc) and write it to a list
+    for i in urls:
+        current_url = urlparse(i)
+        list_of_rootdomains.append(current_url.netloc)
+
+#   Convert the list into a df so we can use the same functions as are being used to summarise other data
+    dfurl = pd.DataFrame({'rootdomains': list_of_rootdomains})
+    
+    return dfurl
 
 
 def import_csv_to_dict(filename):
@@ -75,36 +88,18 @@ def main():
     """
 #   Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME)
-
 #    print(df.columns)
 
-
-
-    """
-    Need to count the unique values in columns to get summaries of the data
-    1. Open/closed/no licence
-    2. Which university released outputs
-    """
+#   Get a list of rootdomains (i.e. netloc) of URLs
+    rootdomains = get_root_domains(df,"URL")
+    
+#   Count the unique values in columns to get summaries of open/closed/no licence and which university released outputs
     open_source_licence = produce_count_and_na(df,'Open Source?')
     universities = produce_count_and_na(df,'RO')
-#   print(open_source_licence)
-#    print(universities)
+    unique_rootdomains = produce_count_and_na(rootdomains,'rootdomains')
+    
+    print("This is how many unique rootdomains there are: ",len(unique_rootdomains))
 
-#   How many URLs are provided (need to find df length then subtract non_na count of URL column)
-    missing_URLs = len(df) - df['URL'].count()
-
-#    parsed = urlparse('http://netloc/path;parameters?query=argument#fragment')
-#    print(parsed.netloc)
-#    print(urls)
-
-#    urls = df['URL']
-#    cleaned_urls = urls[urls.URL.notnull()]
-#    for i in urls:
-#        print(i)
-#        current_url = urlparse(i)
-#        print(current_url)
-
-    print(cleaned_urls)
 
 if __name__ == '__main__':
     main()
