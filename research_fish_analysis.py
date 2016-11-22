@@ -19,13 +19,21 @@ def import_csv_to_dict(filename):
             (rows)
     return data
 
+def convert_to_df(dict_list):
+    """
+    Converts list of dicts into a pd dataframe
+    :params: get a list of dicts
+    :return: a pd df
+    """
+    return pd.DataFrame(dict_list)
 
 def main():
     """
     Main function to run program
     """
     dict_data = import_csv(DATAFILENAME)
-
+    convert_to_df
+    
 
 if __name__ == '__main__':
     main()
