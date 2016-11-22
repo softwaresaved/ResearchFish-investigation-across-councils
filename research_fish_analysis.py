@@ -55,9 +55,7 @@ def get_root_domains(df,colname):
 
 #   Convert the list into a df so we can use the same functions as are being used to summarise other data
     dfurl = pd.DataFrame({'rootdomains': list_of_rootdomains})
-    
     return dfurl
-
 
 def import_csv_to_dict(filename):
     """
@@ -98,8 +96,12 @@ def main():
     universities = produce_count_and_na(df,'RO')
     unique_rootdomains = produce_count_and_na(rootdomains,'rootdomains')
     
+    print(type(unique_rootdomains))
     print("This is how many unique rootdomains there are: ",len(unique_rootdomains))
-
+    for_printing = unique_rootdomains.ix[:30]   
+    for_printing.plot(kind='bar')
+    plt.tight_layout()
+    plt.show()
 
 if __name__ == '__main__':
     main()
