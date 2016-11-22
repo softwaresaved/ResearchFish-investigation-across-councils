@@ -17,6 +17,24 @@ def import_xls_to_df(filename):
     """
     return pd.read_excel(filename,sheetname='Software_TechnicalProducts')
 
+def produce_count(df, colname):
+    """
+    When given a column, returns a count of its unique values
+    This DOES NOT count blank entries - see produce_count_and_na
+    :params: a data frame and a column name in the dataframe
+    :return: a table of unique names and their count
+    """
+    return df[colname].value_counts()
+    
+def produce_count_and_na(df, colname):
+    """
+    When given a column, returns a count of its unique values
+    This also counts blank entries
+    :params: a data frame and a column name in the dataframe
+    :return: a table of unique names and their count
+    """
+    return df[colname].value_counts(dropna = False)
+
 def import_csv_to_dict(filename):
     """
     Importing csv into Python
@@ -39,28 +57,32 @@ def convert_to_df(dict_list):
     """
     return pd.DataFrame(dict_list)
 
-def drop_column(df, columnname):
-    """
-    Drops unneeded column from dataframe
-    :params: a dataframe and the unneeded column
-    :return: a dataframe without the column
-    Note the 1 in the function denotes columns
-    rather than 0 used to drop rows
-    """
-    return df.drop(columnname,1)
 
 def main():
     """
     Main function to run program
     """
+#   Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME)
-    print(df)
+
     print(df.columns)
-    print(df['RO'].value_counts(dropna=False))
-    open_source = df['Open Source?'].value_counts(dropna=False)
-    print(df['Year First Provided'].value_counts(dropna=False))
-    plt.figure()
-    open_source.plot.bar
+
+    """
+    Need to count the unique values in columns to get summaries of the data
+    1. Open/closed/no licence
+    2. Which university released outputs
+    """
+    open_source_licence = produce_count_and_na(df,'Open Source?')
+    universities = produce_count_and_na(df,'RO')
+    print(open_source_licence)
+#    print(universities)
+
+    print(df.count())
+    print(len(df.index))
+    
+
+    
+
 
 if __name__ == '__main__':
     main()
