@@ -30,13 +30,15 @@ def convert_to_df(dict_list):
     """
     return pd.DataFrame(dict_list)
 
+
+
 def main():
     """
     Main function to run program
     """
     dict_data = import_csv_to_dict(DATAFILENAME)
     df = convert_to_df(dict_data)
-    print(df)
+    df = drop_column(df, 'None') ## Dropping the column
 
 
 if __name__ == '__main__':
