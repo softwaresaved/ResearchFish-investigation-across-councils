@@ -5,6 +5,7 @@ import pandas as pd
 import csv
 import matplotlib.pyplot as plt
 from urllib.parse import urlparse
+from collections import Counter
 
 
 DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
@@ -86,7 +87,7 @@ def main():
     """
 #   Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME)
-#    print(df.columns)
+    print(df.columns)
 
 #   Get a list of rootdomains (i.e. netloc) of URLs
     rootdomains = get_root_domains(df,"URL")
@@ -98,10 +99,20 @@ def main():
     print("This is how many unique rootdomains there are: ",len(unique_rootdomains))
 
 #   Set up a shorter variable for printing (there's 380 entries in unique domains) then print it as a bar chart. The tight.layout allows for longer x-lables
-    for_printing = unique_rootdomains.ix[:30]   
-    for_printing.plot(kind='bar')
-    plt.tight_layout()
-    plt.show()
+#    for_printing = unique_rootdomains.ix[:30]   
+#    for_printing.plot(kind='bar')
+#    plt.tight_layout()
+#    plt.show()
+    
+#   Having a play with word frequency analysis
+    list_of_impact_sentences = df['Impact'].dropna().tolist()
+    list_of_impact_words = list()
+    for i in list_of_impact_sentences:
+        list_of_impact_words.append(i.split())
+    list_of_impact_words_cleaned = [item for sublist in list_of_impact_words for item in sublist]
+    counts = Counter(list_of_impact_words_cleaned)
+    counts = counts.most_common()
+    print(counts)
 
 if __name__ == '__main__':
     main()
