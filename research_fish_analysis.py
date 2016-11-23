@@ -95,9 +95,9 @@ def main():
     open_source_licence = produce_count_and_na(df,'Open Source?')
     universities = produce_count_and_na(df,'RO')
     unique_rootdomains = produce_count_and_na(rootdomains,'rootdomains')
-    
-    print(type(unique_rootdomains))
     print("This is how many unique rootdomains there are: ",len(unique_rootdomains))
+
+#   Set up a shorter variable for printing (there's 380 entries in unique domains) then print it as a bar chart. The tight.layout allows for longer x-lables
     for_printing = unique_rootdomains.ix[:30]   
     for_printing.plot(kind='bar')
     plt.tight_layout()
