@@ -98,11 +98,15 @@ def main():
     unique_rootdomains = produce_count_and_na(rootdomains,'rootdomains')
     print("This is how many unique rootdomains there are: ",len(unique_rootdomains))
 
+    print(open_source_licence)
+    print(universities)
+
+
 #   Set up a shorter variable for printing (there's 380 entries in unique domains) then print it as a bar chart. The tight.layout allows for longer x-lables
-#    for_printing = unique_rootdomains.ix[:30]   
-#    for_printing.plot(kind='bar')
-#    plt.tight_layout()
-#    plt.show()
+    for_printing = unique_rootdomains.ix[:30]   
+    for_printing.plot(kind='bar')
+    plt.tight_layout()
+    plt.show()
     
 #   Having a play with word frequency analysis
     list_of_impact_sentences = df['Impact'].dropna().tolist()
@@ -112,7 +116,7 @@ def main():
     list_of_impact_words_cleaned = [item for sublist in list_of_impact_words for item in sublist]
     counts = Counter(list_of_impact_words_cleaned)
     counts = counts.most_common()
-    print(counts)
+#    print(counts)
 
 if __name__ == '__main__':
     main()
