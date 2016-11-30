@@ -1,0 +1,13 @@
+Here's a list of the things I'm interested in looking at. If you would like to do some analysis of this data, please let me (Simon) know.
+
+1. Rate at which outputs are being relased over the years (bar chart). Are software outputs becoming more popular?
+2. Open/closed/none licences (Pie or stacked bar). Are people licensing their software? Is it changing over the years?
+3. Which uni releases the most outputs? If anyone's doing well, why?
+4. Popularity of repos (line chart showing increase over time). Who's most popular, and is it changing?
+5. Impact worldcloud. Do some words crop up often in the impact descriptions?
+
+And maybe, with some more development:
+
+6. Is repo alive. We can ping it, but a more comprehensive test would be better.
+7. Do licence, citation, etc. type of files exist? (Open Source Health Check maybe?)
+8. Search for research domain infomation, put together a list of software used in particular domains, and then publish that list to aid re-use.
