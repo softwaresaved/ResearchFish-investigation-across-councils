@@ -6,6 +6,8 @@ import csv
 import matplotlib.pyplot as plt
 from urllib.parse import urlparse
 from collections import Counter
+from datetime import datetime
+import math
 
 
 DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
@@ -57,20 +59,7 @@ def get_root_domains(df,colname):
 #   Convert the list into a df so we can use the same functions as are being used to summarise other data
     dfurl = pd.DataFrame({'rootdomains': list_of_rootdomains})
     return dfurl
-
-def import_csv_to_dict(filename):
-    """
-    Importing csv into Python
-    :params: get a str of the filename
-    :return: a list() of dict()
-    """
-    output_list = list()
-    with open(filename,'r') as csvfile:
-        reader = csv.DictReader(csvfile)
-        for rows in reader:
-            output_list.append(rows)
-    return output_list
-    # return [rows for rows in reader]
+    
 
 def convert_to_df(dict_list):
     """
@@ -102,20 +91,39 @@ def main():
     print(universities)
 
 
+    for i, row in df.iterrows():
+        df["Year First Provided"][i] = int(df["Year First Provided"][i])
+        print(df["Year First Provided"][i])
+
+#        print(type(df["Year First Provided"][i]))
+#        if df["Year First Provided"][i][:2] == "Pre":
+#            print(df["Year First Provided"][i])
+
+
+
+
+#    print(df["Year First Provided"].min())
+
+#    print(df.sort_values(by="Year First Provided"))
+
+#    print(df.head())
+
+
+
 #   Set up a shorter variable for printing (there's 380 entries in unique domains) then print it as a bar chart. The tight.layout allows for longer x-lables
-    for_printing = unique_rootdomains.ix[:30]   
-    for_printing.plot(kind='bar')
-    plt.tight_layout()
-    plt.show()
+#    for_printing = unique_rootdomains.ix[:30]   
+#    for_printing.plot(kind='bar')
+#    plt.tight_layout()
+#    plt.show()
     
 #   Having a play with word frequency analysis
-    list_of_impact_sentences = df['Impact'].dropna().tolist()
-    list_of_impact_words = list()
-    for i in list_of_impact_sentences:
-        list_of_impact_words.append(i.split())
-    list_of_impact_words_cleaned = [item for sublist in list_of_impact_words for item in sublist]
-    counts = Counter(list_of_impact_words_cleaned)
-    counts = counts.most_common()
+#    list_of_impact_sentences = df['Impact'].dropna().tolist()
+#    list_of_impact_words = list()
+#    for i in list_of_impact_sentences:
+#        list_of_impact_words.append(i.split())
+#    list_of_impact_words_cleaned = [item for sublist in list_of_impact_words for item in sublist]
+#    counts = Counter(list_of_impact_words_cleaned)
+#    counts = counts.most_common()
 #    print(counts)
 
 if __name__ == '__main__':
