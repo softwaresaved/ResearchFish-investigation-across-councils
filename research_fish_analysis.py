@@ -150,12 +150,13 @@ def main():
 #   Collate all impact statements into a text file for later word cloud generation
     impact_to_txt(df,'Impact')
     
+    print(len(unique_rootdomains))
 
 #   Plot results and save charts
-    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
-    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
-    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
-    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
+#    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
+#    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
+#    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
+#    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
 
 
 #   Write results to Excel spreadsheet for the shear hell of it
@@ -163,6 +164,8 @@ def main():
     open_source_licence.to_excel(writer,'opensource')
     universities.to_excel(writer,'universities')
     unique_rootdomains.to_excel(writer,'rootdomain')
+#    new = pd.DataFrame(unique_rootdomains['rootdomains'])
+#    new.to_excel(writer,'rootdomain2')
     year_of_return.to_excel(writer,'returnyear')
     writer.save()
 
