@@ -8,13 +8,13 @@ import csv
 import matplotlib.pyplot as plt
 from urllib.parse import urlparse
 from collections import Counter
-from datetime import datetime
 import math
 
 
 DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
-
-
+CHART_STORE_DIR = "./charts/"
+EXCEL_RESULT_STORE = "./data/researchfish_results.xlsx"
+IMPACT_RESULT_STORE = "./data/impact.txt"
 
 
 
@@ -83,10 +83,10 @@ def get_clean_years(dataframe,colname):
     return dataframe
 
 
-def plot_bar_charts(dataframe,title,xaxis,yaxis,truncate):
+def plot_bar_charts(dataframe,filename,title,xaxis,yaxis,truncate):
     """
     Takes a two-column dataframe and plots it
-    :params: a dataframe with two columns (one labels, the other a count), a title, and titles for the
+    :params: a dataframe with two columns (one labels, the other a count), a filename for the resulting chart, a title, and titles for the
     two axes (if title is None, then nothing is plotted), and a truncate variable which cuts down the number of
     rows plotted (unless it's 0 at which point all rows are plotted)
     :return: Nothing, just prints a chart
@@ -95,7 +95,7 @@ def plot_bar_charts(dataframe,title,xaxis,yaxis,truncate):
 #       This cuts the dataframe down to the number of rows given in truncate
         dataframe = dataframe.ix[:truncate]
 
-    dataframe.plot(kind='bar')
+    dataframe.plot(kind='bar', legend=None)
     plt.title(title)
     if xaxis != None:
         plt.xlabel(xaxis)
@@ -103,9 +103,24 @@ def plot_bar_charts(dataframe,title,xaxis,yaxis,truncate):
         plt.ylabel(yaxis)
 #   This provides more space around the chart to make it prettier        
     plt.tight_layout(True)
+    plt.savefig(CHART_STORE_DIR + filename + '.png', format = 'png', dpi = 150)
     plt.show()
     return
 
+
+def impact_to_txt(dataframe,colname):
+    """
+    Takes a dataframe, collates all content in the colname column and writes it to a textfile
+    """
+#   Don't want any of the NaNs, so drop them
+    dataframe.dropna(subset=[colname], inplace=True)
+#   Open file for writing
+    file_for_impacts = open(IMPACT_RESULT_STORE, 'w')
+#   Go through dataframe row by row and write the text from the colname column to as a separate line to the text file
+    for i, row in dataframe.iterrows():
+        file_for_impacts.write("%s\n" % dataframe[colname][i])
+    return
+    
 
 def main():
     """
@@ -118,52 +133,39 @@ def main():
 #   Clean the years column
     df = get_clean_years(df,'Year First Provided')
 
+
 #   Get a list of rootdomains (i.e. netloc) of URLs
     rootdomainsdf = get_root_domains(df,"URL")
     
-#   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs
+    
+#   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
+    open_source_licence.index = open_source_licence.index.fillna('No response')
     universities = produce_count_and_na(df,'RO')
     unique_rootdomains = produce_count_and_na(rootdomainsdf,'rootdomains')
     year_of_return = produce_count(df,'Year First Provided')
+#   Want this to be sorted in year order rather than in order of largest count
+    year_of_return.sort_index(inplace = True)
 
-#    print(year_of_return.sort_values(by='Year First Provided'))
-    print(type(year_of_return))
+#   Collate all impact statements into a text file for later word cloud generation
+    impact_to_txt(df,'Impact')
+    
 
-    writer = ExcelWriter('data/researchfish_results.xlsx')
-    open_source_licence.to_excel(writer,'Licences')
-    universities.to_excel(writer,'Universities')
-    unique_rootdomains.to_excel(writer,'Repo domains')
-    year_of_return.to_excel(writer,'Year of return')
+#   Plot results and save charts
+    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
+    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
+    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
+    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
+
+
+#   Write results to Excel spreadsheet for the shear hell of it
+    writer = ExcelWriter(EXCEL_RESULT_STORE)
+    open_source_licence.to_excel(writer,'opensource')
+    universities.to_excel(writer,'universities')
+    unique_rootdomains.to_excel(writer,'rootdomain')
+    year_of_return.to_excel(writer,'returnyear')
     writer.save()
 
-
-#    plot_bar_charts(year_of_return,'In which year were outputs submitted?', 'Year','Number of outputs',0)
-#    plot_bar_charts(universities,'Top 30 universities that submit software as ResearchFish outputs',None, 'Number of outputs',30)
-#    plot_bar_charts(open_source_licence,'Are ResearchFish outputs open-source licensed?', 'Licence','Number of outputs',0)
-#    plot_bar_charts(unique_rootdomains,'Top 30 domains to store ResearchFish outputs', None, 'Number of outputs',30)
-
-    
-
-
-# OUTPUT
-
-#    print("This is how many unique rootdomains there are: ",len(unique_rootdomains))
-#    print(open_source_licence)
-#    print(universities)
-#    print(year_of_return)
-
-
-    
-#   Having a play with word frequency analysis
-#    list_of_impact_sentences = df['Impact'].dropna().tolist()
-#    list_of_impact_words = list()
-#    for i in list_of_impact_sentences:
-#        list_of_impact_words.append(i.split())
-#    list_of_impact_words_cleaned = [item for sublist in list_of_impact_words for item in sublist]
-#    counts = Counter(list_of_impact_words_cleaned)
-#    counts = counts.most_common()
-#    print(counts)
 
 if __name__ == '__main__':
     main()
