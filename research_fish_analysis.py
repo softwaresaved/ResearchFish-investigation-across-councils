@@ -9,13 +9,14 @@ import matplotlib.pyplot as plt
 from urllib.parse import urlparse
 from collections import Counter
 import math
+import requests
+import httplib2
 
 
 DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
 CHART_STORE_DIR = "./charts/"
 EXCEL_RESULT_STORE = "./data/researchfish_results.xlsx"
 IMPACT_RESULT_STORE = "./data/impact.txt"
-
 
 
 def import_xls_to_df(filename):
@@ -26,6 +27,16 @@ def import_xls_to_df(filename):
     """
     return pd.read_excel(filename,sheetname='Software_TechnicalProducts')
 
+def add_column(dataframe,newcol):
+    """
+    Adds a new column of NaNs called newcol
+    :params: a dataframe and column name
+    :return: a dataframe with a new column
+    """
+    dataframe[newcol] = np.nan
+    return dataframe
+
+
 def produce_count(df, colname):
     """
     When given a column, returns a count of its unique values
@@ -34,6 +45,7 @@ def produce_count(df, colname):
     :return: a table of unique names and their count
     """
     return pd.DataFrame(df[colname].value_counts())
+
     
 def produce_count_and_na(df, colname):
     """
@@ -43,6 +55,7 @@ def produce_count_and_na(df, colname):
     :return: a table of unique names and their count
     """
     return pd.DataFrame(df[colname].value_counts(dropna = False))
+
 
 def get_root_domains(dataframe,colname):
     """
@@ -121,6 +134,41 @@ def impact_to_txt(dataframe,colname):
         file_for_impacts.write("%s\n" % dataframe[colname][i])
     return
     
+    
+def check_url_status(dataframe, colname):
+
+
+#    listUrls = ['http://www.google.com','http://www.xkcd.com','http://somebadurl.com']
+
+#    list_urls = dataframe.dropna(subset=[colname])
+
+#   Don't want any of the NaNs, so drop them
+    dataframe.dropna(subset=[colname], inplace=True)
+
+    h = httplib2.Http()
+    for i, row in dataframe.iterrows():
+        try:
+            print("Checking " + dataframe[colname][i])
+            response, content = h.request(dataframe[colname][i])
+            if response.status < 400:
+                dataframe[colname][i] = response['date']
+#                print(response['status'])
+#                print(response['date'])
+        except:
+            pass
+            dataframe[colname][i] = "DOWN"
+
+#    for i in list_urls:
+#        print(i)
+#        try:
+#            response, content = h.request(i)
+#            if response.status < 400:
+#                print(response['status'])
+#                print(response['date'])
+#        except httplib2.ServerNotFoundError:
+#            print("DOWN")
+
+    return    
 
 def main():
     """
@@ -129,14 +177,14 @@ def main():
 #   Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME)
 
+#   Add a column for URL pinging response
+    add_column(df,'URL status')
 
 #   Clean the years column
     df = get_clean_years(df,'Year First Provided')
 
-
 #   Get a list of rootdomains (i.e. netloc) of URLs
-    rootdomainsdf = get_root_domains(df,"URL")
-    
+    rootdomainsdf = get_root_domains(df,'URL')
     
 #   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
@@ -152,6 +200,11 @@ def main():
     
     print(len(unique_rootdomains))
 
+#    print(df['URL status'])
+#   url_status = check_url_status(df,'URL')
+
+
+
 #   Plot results and save charts
 #    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
 #    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
@@ -160,14 +213,15 @@ def main():
 
 
 #   Write results to Excel spreadsheet for the shear hell of it
-    writer = ExcelWriter(EXCEL_RESULT_STORE)
-    open_source_licence.to_excel(writer,'opensource')
-    universities.to_excel(writer,'universities')
-    unique_rootdomains.to_excel(writer,'rootdomain')
+#    writer = ExcelWriter(EXCEL_RESULT_STORE)
+#    open_source_licence.to_excel(writer,'opensource')
+#    universities.to_excel(writer,'universities')
+#    unique_rootdomains.to_excel(writer,'rootdomain')
 #    new = pd.DataFrame(unique_rootdomains['rootdomains'])
 #    new.to_excel(writer,'rootdomain2')
-    year_of_return.to_excel(writer,'returnyear')
-    writer.save()
+#    year_of_return.to_excel(writer,'returnyear')
+#    url_status.to_excel(writer,'urlstatus')
+#    writer.save()
 
 
 if __name__ == '__main__':
