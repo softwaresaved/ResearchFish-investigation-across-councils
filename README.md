@@ -1,8 +1,5 @@
 # ResearchFish
 
-### 1. How to run
-### 2. About the data
-
 ## Running the analysis
 
 The code runs in a virtual environment which can be installed [following this guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
