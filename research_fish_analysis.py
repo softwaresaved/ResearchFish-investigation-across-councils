@@ -27,6 +27,7 @@ def import_xls_to_df(filename):
     """
     return pd.read_excel(filename,sheetname='Software_TechnicalProducts')
 
+
 def add_column(dataframe,newcol):
     """
     Adds a new column of NaNs called newcol
@@ -135,40 +136,32 @@ def impact_to_txt(dataframe,colname):
     return
     
     
-def check_url_status(dataframe, colname):
-
-
-#    listUrls = ['http://www.google.com','http://www.xkcd.com','http://somebadurl.com']
-
-#    list_urls = dataframe.dropna(subset=[colname])
-
-#   Don't want any of the NaNs, so drop them
+def check_url_status(dataframe, colname, statuscol):
+    """
+    Takes a dataframe and a column in that dataframe that contains URLs. Pings the URLs to see if they throw
+    an exception, then writes the result to another column of the dataframe
+    :params: a dataframe, a column (colname) in which URLs are stored and a column (statuscol) in which the 
+    URL status will be recorded
+    :return: a dataframe with the status of the URLs recorded in a column
+    """
+#   Don't want any of the NaNs, so drop the rows in which NaN was entered for the URL
     dataframe.dropna(subset=[colname], inplace=True)
 
     h = httplib2.Http()
     for i, row in dataframe.iterrows():
-        try:
-            print("Checking " + dataframe[colname][i])
-            response, content = h.request(dataframe[colname][i])
-            if response.status < 400:
-                dataframe[colname][i] = response['date']
-#                print(response['status'])
-#                print(response['date'])
-        except:
-            pass
-            dataframe[colname][i] = "DOWN"
-
-#    for i in list_urls:
-#        print(i)
-#        try:
-#            response, content = h.request(i)
-#            if response.status < 400:
-#                print(response['status'])
-#                print(response['date'])
-#        except httplib2.ServerNotFoundError:
-#            print("DOWN")
-
-    return    
+#        print(dataframe[statuscol][i])
+        if math.isnan(dataframe[statuscol][i]) == True:
+            try:
+                print("Checking " + dataframe[colname][i])
+                response, content = h.request(dataframe[colname][i])
+                if response.status < 400:
+                    dataframe[statuscol][i] = response['date']
+#                    print(response['status'])
+#                    print(response['date'])
+            except: 
+                pass
+                dataframe[statuscol][i] = "No response"
+    return dataframe
 
 def main():
     """
@@ -185,6 +178,12 @@ def main():
 
 #   Get a list of rootdomains (i.e. netloc) of URLs
     rootdomainsdf = get_root_domains(df,'URL')
+
+#   Adds data into df about status of the URL at which software is stored
+    url_check = check_url_status(df,'URL','URL status')
+    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
+    print(url_df)
+#    url_df = pd.DataFrame(url_check['URL','URL status'])
     
 #   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
@@ -192,6 +191,7 @@ def main():
     universities = produce_count_and_na(df,'RO')
     unique_rootdomains = produce_count_and_na(rootdomainsdf,'rootdomains')
     year_of_return = produce_count(df,'Year First Provided')
+    url_status = produce_count(df,'URL status')
 #   Want this to be sorted in year order rather than in order of largest count
     year_of_return.sort_index(inplace = True)
 
@@ -199,10 +199,6 @@ def main():
     impact_to_txt(df,'Impact')
     
     print(len(unique_rootdomains))
-
-#    print(df['URL status'])
-#   url_status = check_url_status(df,'URL')
-
 
 
 #   Plot results and save charts
@@ -213,15 +209,14 @@ def main():
 
 
 #   Write results to Excel spreadsheet for the shear hell of it
-#    writer = ExcelWriter(EXCEL_RESULT_STORE)
-#    open_source_licence.to_excel(writer,'opensource')
-#    universities.to_excel(writer,'universities')
-#    unique_rootdomains.to_excel(writer,'rootdomain')
-#    new = pd.DataFrame(unique_rootdomains['rootdomains'])
-#    new.to_excel(writer,'rootdomain2')
-#    year_of_return.to_excel(writer,'returnyear')
-#    url_status.to_excel(writer,'urlstatus')
-#    writer.save()
+    writer = ExcelWriter(EXCEL_RESULT_STORE)
+    open_source_licence.to_excel(writer,'opensource')
+    universities.to_excel(writer,'universities')
+    unique_rootdomains.to_excel(writer,'rootdomain')
+    year_of_return.to_excel(writer,'returnyear')
+    url_df.to_excel(writer,'urlstatus')
+    url_status.to_excel(writer,'urlstatus_summ')
+    writer.save()
 
 
 if __name__ == '__main__':
