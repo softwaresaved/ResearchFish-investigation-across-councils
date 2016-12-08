@@ -125,6 +125,8 @@ def plot_bar_charts(dataframe,filename,title,xaxis,yaxis,truncate):
 def impact_to_txt(dataframe,colname):
     """
     Takes a dataframe, collates all content in the colname column and writes it to a textfile
+    :params: a dataframe and a column (colname) containing impact statements
+    :return: write a text file containing all impact statements combined
     """
 #   Don't want any of the NaNs, so drop them
     dataframe.dropna(subset=[colname], inplace=True)
