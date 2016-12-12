@@ -5,8 +5,10 @@ I completed the first draft of the article about the ResearchFish data and sent 
 Ben identified some issues with the data I had been given, and a couple of issues with the methodology. I agreed to adapt and repeat the analysis, edit the post and send it to him for review. His comments were:
 
 1. Some of the 'Type of Tech Product' (TOTP) included in the original data set do not relate to software!
-..* The original data contained the TOTPs: Detection Devices, e-Business Platform, Grid Application, New Material/Compound, New/Improved Technique/Technology, Physical Model/Kit, Software, Systems, Materials & Instrumental Engineering, Systems, Materials &amp; Instrumental Engineering, and Webtool/Application
-..* The only TOTPs that related to software are: e-Business Platform, Grid Application, Software, and Webtool/Application
+
+  * The original data contained the TOTPs: Detection Devices, e-Business Platform, Grid Application, New Material/Compound, New/Improved Technique/Technology, Physical Model/Kit, Software, Systems, Materials & Instrumental Engineering, Systems, Materials &amp; Instrumental Engineering, and Webtool/Application
+
+  * The only TOTPs that related to software are: e-Business Platform, Grid Application, Software, and Webtool/Application
 
 1. The question about open source licensing is asked only for the 'Software' TOTP. Consequently, the field 'Open Source?' can only be assessed in relation to 'Software' TOTPs (and not e-Business Platform, Grid Application, or Webtool/Application).
 
