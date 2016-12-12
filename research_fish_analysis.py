@@ -38,6 +38,31 @@ def add_column(dataframe,newcol):
     return dataframe
 
 
+def clean_data(dataframe,colname):
+    """
+    Cleans the dataframe based on advice we have been given
+    1. Cleans the year in which submission was made and removes years that are not straighforward, namely "Pre-<year>" because it's ambiguous:
+    could be any year at all before <year>
+    2. Remove earlier years of data. Only 2012-2016 are reliable enough to include in the study
+    3. Removes 'Type of tech product' that shouldn't have been included in the original data we were given. Only 'Software', 'Grid Application',
+    'e-Business Platform' and 'Webtool/Application' should have been included.
+    :params: a dataframe and a colname of the column in which the years are stored
+    :return: a dataframe with only int years and NaNs
+    """
+#   Go through the rows, if you can't convert the year into an int (i.e. the entry includes text), write a NaN back into the dataframe   
+    for i, row in dataframe.iterrows():
+        try:
+            int(dataframe[colname][i])
+        except:
+            dataframe[colname][i] = np.nan
+    
+    dataframe = dataframe[(dataframe['Year First Provided'] != 2012) & (dataframe['Year First Provided'] != 2016)]
+    
+    dataframe = dataframe[(dataframe['Type of Tech Product'] != 'Software') & (dataframe['Type of Tech Product'] != 'Grid Application') & (dataframe['Type of Tech Product'] != 'e-Business Platform')& (dataframe['Type of Tech Product'] != 'Webtool/Application')]
+    
+    return dataframe
+    
+
 def produce_count(df, colname):
     """
     When given a column, returns a count of its unique values
@@ -79,22 +104,6 @@ def get_root_domains(dataframe,colname):
 #   Convert the list into a df so we can use the same functions as are being used to summarise other data
     dataframeurl = pd.DataFrame({'rootdomains': list_of_rootdomains})
     return dataframeurl
-    
-
-def get_clean_years(dataframe,colname):
-    """
-    Takes the year in which submission was made and removes years that are not straighforward, namely
-    "Pre-<year>" because it's so ambiguous: could be any year at all before <year>
-    :params: a dataframe and a colname of the column in which the years are stored
-    :return: a dataframe with only int years and NaNs
-    """
-#   Go through the rows, if you can't convert the year into an int, write a NaN back into the dataframe   
-    for i, row in dataframe.iterrows():
-        try:
-            int(dataframe[colname][i])
-        except:
-            dataframe[colname][i] = np.nan
-    return dataframe
 
 
 def plot_bar_charts(dataframe,filename,title,xaxis,yaxis,truncate):
@@ -175,17 +184,20 @@ def main():
 #   Add a column for URL pinging response
     add_column(df,'URL status')
 
-#   Clean the years column
-    df = get_clean_years(df,'Year First Provided')
+#   Clean the dataframe
+    df = clean_data(df,'Year First Provided')
+
+    print(len(df))
+    
+    print(df['Year First Provided'])
 
 #   Get a list of rootdomains (i.e. netloc) of URLs
     rootdomainsdf = get_root_domains(df,'URL')
 
 #   Adds data into df about status of the URL at which software is stored
-    url_check = check_url_status(df,'URL','URL status')
-    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
-    print(url_df)
-#    url_df = pd.DataFrame(url_check['URL','URL status'])
+#    url_check = check_url_status(df,'URL','URL status')
+#    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
+#    print(url_df)
     
 #   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
@@ -216,8 +228,8 @@ def main():
     universities.to_excel(writer,'universities')
     unique_rootdomains.to_excel(writer,'rootdomain')
     year_of_return.to_excel(writer,'returnyear')
-    url_df.to_excel(writer,'urlstatus')
-    url_status.to_excel(writer,'urlstatus_summ')
+#    url_df.to_excel(writer,'urlstatus')
+#    url_status.to_excel(writer,'urlstatus_summ')
     writer.save()
 
 
