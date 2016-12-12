@@ -16,7 +16,7 @@ Ben identified some issues with the data I had been given, and a couple of issue
 
 1. Change the language from "register an output" to "record an output" to ensure that people don't think that EPSRC are endorsing a particular bit of software.
 
-1. There is a possibility that some of the outputs are duplicates, because Investigators occassionally re-use an output against different grants. There's no easy way to search for these. Probably the most effective way to find them is to look for duplicates in the 'Impact' and 'Product' fields, which are both verbose and hence unlikely to coincidentally match another entry.
+1. There is a possibility that some of the outputs are duplicates, because Investigators occassionally re-use an output against different grants. There's no easy way to search for these. Probably the most effective way to find them is to look for duplicates in the 'Impact' and 'Tech Product' fields, which are both verbose and hence unlikely to coincidentally match another entry.
 
 1. We need to be careful with the date range. ResearchFish only began to be used by the EPSRC in 2014, data from earlier will have been retrofitted from data that was in earlier systems the EPSRC used to store research outputs. However, Ben believes that the data over the years 2012-2014 is reliable enough to be included in this study. Consequently, we're going to limit the date range to 2012-2016. I'll add a section into the proviso section of the article about why this change has been made.
 
