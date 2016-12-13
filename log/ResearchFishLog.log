@@ -1,0 +1,6 @@
+2016-12-13 12:22:09,789 - __main__ - INFO - Starting...
+2016-12-13 12:22:10,193 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 12:22:10,193 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 12:22:10,193 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 12:22:10,193 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 12:22:10,193 - __main__ - INFO - Records left in cleaned data set: 856
