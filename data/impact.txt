@@ -6,7 +6,6 @@ Early days
 Early days yet
 Early days yet
 Demonstrated the feasibility of modelling truly structurally dynamic systems while maintaining computational efficiency through JIT compilation. This has generated interest in the object-oriented modelling community; e.g., commercial languages like Modelica struggle with this.
-Results were provided to a European project where the project would not have been completed without our software
 The SmartPM software is the first truly flexible tool which allows oil refinery operators to (a) establish the level of fouling in their heat exchanger networks, (b) establish the most economically attractive cleaning scheduling programme to mitigate fouling, and (c) to compare cleaning programmes with other mitigation options such as network retrofitting or cleaning chemicals.   Proof of impact is its adoption by several oil majors. The technology reduces financial costs as well as greenhouse gas emissions.
 Platform used in further research in EC FP7 projects such as PARLANCE and SpaceBook.
 Is being widely used for functional Near Infra Red Spectroscopic Imaging
@@ -15,24 +14,16 @@ The software has only recently been released, but there is strong interest for i
 KRoC provides a demonstrator providing proof-of-concept technology for performance scalability (w.r.t. the number of cores) of complex concurrent systems (including real-time and complex modelling).  Although occam-pi is (regrettably) not a `mainstream' system language, the mechanisms developed for its implementation -- that provide efficient and multicore scalability -- and for the verification of the concurrent behaviour of its programmed systems provide targets for mainstream technologies to achieve. Published papers (listed as outcomes from our EPSRC `CoSMoS' research grant) explain the mechanisms developed for this.
 We have a user base of several thousand, including most of the major photoacoustic imaging groups from around the world. The question-and-answer forum, which we maintain, is constantly active. Our group (through my colleague Bradley Treeby) has received further funding for related projects in ultrasound therapy based on this software platform. We have also established a collaboration with Brno University of Technology based on the development of this suite for high performance computing platforms.
 The source codes have been used by some domain researchers to benchmark their optimisation algorithms for continuous dynamic optimisation problems.
-Successfully applied in the study of AMD funded by The Dunhill Medical Trust.
 Thus far, 936 downloads worldwide since release. 15% USA; 15%UK; 12%China; 7%India; 7%Germany; 4%Russia; 4%Spain; 36%RestOfWorld.
 Has been used in teaching automated stock-market trading to c. 100 masters-level students every year 2012/2013/2014, so around 300 students to dat.
-The app was sent to several companies to spur their interest in commercial exploitation of the intellectual property arising from relevant EPSRC projects. Dolby has made several visit to King's College and is presently evaluating our technology.
 The software has been used in three publications by other groups
 CUTEst is the defacto testing tool for nonlinear optimization, and is used by almost all algorithm
 developers to evaluate their software.
 tbc
-tbc
 Oracle Research Labs have adopted many of the techniques internally for their big data applications.
-Impressive 3D simulations were analysed which led to the publication of several papers and the delivery of several presentations
 The SEEP platform was used for a range of projects by collaborators eg from IBM.
-The software has been used by other researchers working in this field to assist with their own outputs.
 We believe this to be the first general-purpose theorem proving tool based on the theoretical concept of &quot;cyclic proof&quot;.
-further research
-Development of a University spin-out company.
 The MOOC Introduction to Steel was released in self-paced format last September, 1st. During these two months, 4,969 participants (see attachment for details) enrolled to the course and 27% of them got an edX Honor Code Certificate. It's amazing to know that 12,568 participants from 133 countreies (1st edition + self-paced format) have enrolled to the course to learn about Steel and its properties.
-The impact is on this project only at this time. The software is in the process of being released as open source.
 See the published papers
 The SWO is currently being used to describe software used in multiple biomedical applications.
 Apache is the most well known and respected of the Open Source Software Foundations. 
@@ -49,37 +40,23 @@ The platform was used by participants in the project trials. However elements of
 The app is freely available but only used to date by recruited participants.
 We have not yet written up the outputs from the deployment or the design of this except that it derived from design sessions with teenagers.
 Gaining wider use, experiments in visualisation of fine grain measurement
-The software was designed in a flexible fashion, to allow quick adaptation to a range of acquisition schemes and detectors. It is therefore expected that all or part of it could be used for a range of hyperspectral data.
 Demonstrated effectivity of algorithms in research paper.
-CSIC in-house software for plotting colour map and video of temperature data
-Graphic user interface for analyzing FO temperature data
-Graphic user interface for oscilloscope
 The software enables users to rapidly produce bespoke EoS, tailored to their particular application. It will also enable these models to continually evolve as new measurements become available, ensuring that experimental advances are rapidly converted into improved CCS modelling and, ultimately, better performance and efficiency of real CCS processes. During the project a demonstration workshop was held to train potential industrial and academic users on the use of the software.
 
 Ultimately, the tool will make it straightforward for users to continually and rapidly update their EoS in response to emerging experimental data. The resulting EoS will deliver greater range, certainty and computational efficiency in a wide range of CCS modelling. These EoS will contribute to more effective optimisation of CCS, making the process cleaner, safer, more efficient and more economical. This modelling will also be essential to design codes and safety regulations and will provide key modelling support to the urgently required public engagement and consultation on pipeline transport of CO2.
 Without this software, I could not have done the research on OpenCL acceleration of the Weather Research and Forecasting model (WRF), nor this year's OTG work on acceleration of a Large Eddy Simulator and model coupling with WRF
 Used in teaching in MSc Advanced Comp Science at Sussex uni.
-It allows fast and reliable simulation of phase contrast images. Despite to being a recent development, the University of Saskatchewan is using it, and we also use it as a training tool for students at UCL.
 Too soon to tell.
 Increasingly widely used in neuroimaging studies.
-In my research team openFTL serves as our joint development and simulation platform. Hence, all research in my team is based on openFTL. Beyond my research team, components of openFTL are also used by Prof Kenichi Soga (Cambridge), Prof Denis Zorin (New York University) and Dr Jakub Sistek (Czech Academy of Sciences).
-The tool notifies the tester about outlying potential anomalous behaviours of an agent-based model.
 Provision of new software tools for the neuroscience community.
-The prototype has been demonstrated in TfL
-The ABM simulation has been demonstrated in TfL.
 The PPL was originally released in 2001.
 The software was used in the Victorian State Election November 2014 to capture and process votes.
 The software covers two separate models for spatial analysis; the Space Syntax model and the Agent model. These two models are theoretically different in spite of the fact that they agree on the principal relationship between space and society. They start from different representations, and they diverge at the point of modelling. The agent model represents an emergent process that leads to form aggregate patterns of movement activity. Through its ability to display movement data in relation to aggregate patterns of agents, depthmapX's agents have proven to be an effective tool to simulate natural movement. Space Syntax builds on a synchronic reduction of spatial relationships in the built environment. Mapping this reduction into networks of longest and fewest lines, depthmapX's axial and segment analyses are powerful methods for predicting to-movement and through-movement in cities. On the scale of buildings, spatial analysis using depthmapX can reveal relational structures that convey how social organisations occupy spaces. depthmapX is a platform that brings together these too models to be tested in an analytical approach. It also affords experimental and developer approaches.
 
 The current usage of this software has proven to engage different types of academic communities that have a language in common with the notion of space. These communities range between planners, designers, social scientists, anthropologists, crime scientists, geographers, computer scientists and economists. In general terms, all what brings together the social and the spatial. In different contexts, spatial modelling using depthmapX can help forming assumptions about social behaviour in space and model spatial and social relationships. Moreover, depthmapX significance exceeds its common usage as an analytical tool to understand the built environment on different scales and go beyond that to act as a design and decision making support tool. The intelligent usage of software will deploy it in supporting design process with a knowledge-base that is suggested to make designs more responsive towards the real settings of the built environment. In simple terms, depthmapX is increasingly used as a tool for design thinking. By using it efficiently, the software helps on sparing time and cost, particularly on the scale of complex buildings and large scale urban planning.
 Currently the "Space Syntax Toolkit" consists of two modules: "Graph analysis" and "Attributes explorer". The "Graph analysis" module supports the verification and analysis of the spatial network model. This consists of an axial map layer, representing the urban street network, and an unlinks layer, indicating bridges and tunnels with no level crossing. The module offers a verification tool to check the geometric and topological integrity of each layer, helping correct any problems before running the analysis. The axial and segment analysis is performed in depthmapXnet, via a direct link from QGIS, which receives and prepares the results once the calculations are completed. The "Attributes explorer" module supports the visual and statistical exploration of the analysis results. It provides quick analysis of individual quantitative attributes of a selected layer, mapping the values using simplified symbology settings, displaying essential descriptive statistics, and plotting basic interactive charts (histogram and scatter plot).
-https://github.com/SpaceGroupUCL
-https://www.jiscmail.ac.uk/cgi-bin/webadmin?A0=DEPTHMAP
-During the research different tools for a number of platforms (Python, C# plugins and R statistical modelling, Rhino/Grasshopper plugins) were developed in order to generate and visualise the results of this new Space Syntax analysis method. The results were published on the Journal of Space Syntax, describing a 3D VGA analysis research based on 'cube-like' encoded space that can be seen as both a small scale building analysis but also an urban scale setting. This theoretical &quot;cube-like&quot; structure is chosen in order to reassemble attributes of real settings.
 The software has been downloaded a large number of times.
-In addition to this software an open-source library of test cases is being prepared for validation purposes (as part of an EC COST project).
 Wide spread use and application of research outputs to deliver service improvements and efficiency of operation and maintenance of drinking water distribution systems.
-Enhances our ability t investigate optical properties of photonic nanostructures.
 Supports children with ASD specifically but can support other groups.
 Designed by people with ASD.
 Unique features, e.g. nature of support.
@@ -89,17 +66,11 @@ The paper has been cited by 30 researchers since 2012
 The paper has been cited 22 times since 2012.
 The paper has been cited 10 times since 2012.
 FCP2PN tool was an implementation of the polynomial translation of Finite Control Processes (an important subset of pi-calculus) to safe Petri nets, that demonstrated its practicality. The possibility of a polynomial translation is of major theoretical importance. We are not aware of any &quot;practical&quot; impact.
-None yet.
-None yet.
 The UK is now recognised as a world leading centre for kinetic plasma simulations for laser-plasmas
-The RMT code has been used for comparison with experiment to validate a new experimental technique for time-resolved four-wave mixing spectroscopy.
-None so far
 This software reflects the outcomes of the PhD Thesis &quot;Reliable Massively Parallel Symbolic Computing Fault Tolerance for a Distributed Haskell&quot; by Rob Stewart, Heriot-Watt University, November 2013.
 This software provides enabling technology for high-level parallel programming, and was the basis for the measurements of challenging parallel symbolic applications on the HECToR super-computer.
 This serialisation component provides key functionality to the HdpH software technology, which is the main software output of the project. Serialisation is also of interest in isolation, therefore this module was published separately as well.
 More groups worldwide using the software
-The software led to a more comprehensive analysis of uncertainty impacts on adaptation decisions
-Basis of 1 journal paper
 The dynamic background model has been very popular among the research community and many other researchers benefit from using the code released by us.
 To inform industry and the academic community of the energy saving potential of small cell and Het Net deployments in 4G networks. The outputs have directly fed the research agenda in 5G where cell densification is a major strategy to both in crease capacity whilst saving energy.  A key reference is: Badic, B., O'Farrell, T., Loskot, P. and He, J., "Energy efficient radio access architectures for green radio: large versus small cell size deployment", Proc. of 70th IEEE Vehicular Technology Conference (VTC2009-Fall), Anchorage, Alaska, USA, 20-23 September 2009 Invited Paper (DOI: 10.1109/VETECF.2009.5379035, cited: 144)
 Utilised in the Horizon Majority Report project: Citizen Empowerment through Collaborative Sensemaking. Paper published in the Proceedings of the 11th International ISCRAM Conference  http://www.iscramlive.org/ISCRAM2014/papers/p163.pdf
@@ -111,14 +82,12 @@ Nemi Anywhere - Developed through Nottingham Universities Digital Humanities Cen
 Anywhere 2 - The testing and further development of the platform was aided through a Creative Innovation grant, the business support strand of the Cultural Olympiad in the East Midlands, which funded a period of collaboration with Theresa Caruana. During this period, EPSRC funding in the form of a Toward Pervasive Media feasibility study, Urban Mediator, was accessed to allow the development and trial of a number of mobile city exploration experiences using the Anywhere 2 platform, culminating in a showcase event at the Broadway media centre in Nottingham in February 2011.
 .
 Used as a platform for creating the Blast Theory's Riderspoke where Cyclists explore the city at night recording stories about their lives and listening to other people's. Rider Spoke was first shown at the Barbican in London in October 2007 and has since been presented in Athens, Brighton, Budapest, Sydney and Adelaide.
-The software infrastructure underpinned all of our engagement activities.
 Aestheticodes is a now a new to market company that has evolved out of a joint project between Designers and Computer Scientists under the research umbrella of Horizon Digital Economy research Institute at The University of Nottingham. The company offers a programming, APP development and graphic design service. We can produce a full visual branding and interactivity service that is bespoke to each brand or context. Aestheticodes is an unusual company in that it is commercially implementing ongoing research and innovations to bring the customer the most up to date and unique service available.
 Paper published: http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6467038
 This was vital to keep the network operating at one of the install locations where a touch screen did not work, and it therefore underpinned our outreach activities at that site.
 .
 .
 There have been various plug-ins developed for use in Horizon projects such as Relate:  enables artists to engage with communities about energy and climate change by developing a series of playful, creative activities involving data capture, visualisation and comparison.
-None
 Software being utilised in Nottingham hospitals
 Presentation at PERCOM 2014: http://www.cs.nott.ac.uk/~gss/mobility.php
 .
@@ -129,9 +98,6 @@ Xen has thrown open the doors to experimental new operating systems such as ours
 to be included in the Linux kernel by default
 n/a
 n/a
-We use this software as the base for a further funding application (2016 Hydro Nation Scholarship programme).
-None yet known
-None yet known
 None yet known
 None yet known
 None yet known
@@ -141,14 +107,8 @@ None yet known
 None yet known
 Paper publication Nguyen et al. (2015) DOI:10.1007/978-3-319-15615-6_10
 None yet known
-None yet known
-None as yet
-no impact yet
-Spin-out company MIME Technologies Ltd
 Professional practice - allows young people to capture and attach further digital value to the things they produce using woodland materials
-None yet realised
 Source code vailable for use by the public
-None yet known
 None yet known
 None yet known
 Were able to experiment and provide LBE access to the Internet to PAWS participants. Demostrated that LBE service is a feasible approach to provide Internet access to the hard-to-reach communities.
@@ -171,12 +131,8 @@ Details of the collaboration are noted in the PhD Thesis of Martin Ward, Univers
 A large (approx 100)  number of international users are now using the code.
 So far I am not aware of non-academic impacts of this tool.
 We used this to provide a first realistic description of HAADF-STEM imaging of nano particles
-The software are available to the public upon request and several requests from american and india have been received and software dispatched.
-The library forms the basis of additional developments by the PI and collaborators.
 The appication has been visited by over 3300 people from 99 countries.
 Versions 1, 2 &amp;amp; 3 have lead to follow-on grants from EPSRC, U-Man KTA and collaborations with companies such as a Leading Motorsport Company, National Nuclear Laboratory (NNL)
-Apart from a CPC journal publication, we plan to release the multi-GPU code on the DualSPHysics website once the code has been made releasable.
-Impacts are awaiting code release.
 Versions 1, 2 and 3 have lead to follow-on grants from EPSRC, U-Man KTA and collaborations with companies such as a Leading Motorsport Company, National Nuclear Laboratory (NNL).
 
 1st DualSPHysics Users Workshop took place at the University of Manchester, September 2015.
@@ -184,52 +140,27 @@ A number of projects in our group (publications pending) have used this tool to 
 55 citations and use in numerous studies.
 This tool is used for teaching and for research in various institutions worldwide
 This tool, still under active development, makes it possible to generate constraint models automatically from their specifications, rather than relying on human experts.
-Believed to be the only simple, adaptive approach.
 None
 This software provides the first capability to link via a unique mathematical mapping (as developed in associated publications) the regularity of a grain structure generated by Voronoi tessellation and three simple, measurable parameters: maximum, minimum and average grain size; this is the so-called Controlled Poisson Voronoi tessellation. Furthermore, the software can automatically generate cohesive zones along grain boundaries for the first time, including at multiple junctions (as developed in associated publications).
 It got Oxfam thinking of stories in a new way. There has not been any follow on from this specific app but the collaboration started another research project- Internet of Second Hand Things
 Walking Through Time became a quick hit that demonstrated the potential for mashing up different maps and geographic data on the Apple iPhone.
 1.	Speed, C. 2012 Walking Through Time: Use of Locative Media to Explore Historical Maps, in Mapping Cultures, Palgrave Books, London. pp. 160-180.
 2.	Speed, C. 2012 Mobile Ouija Boards. In On Heritage. Edited by Giaccardi, E. London: Routledge. pp.179-196
-It has been licensed for evaluation to Rocket Pictures.
 The software is employed by approximately 30 groups including NNL and CNNC. It is also being used as part of the programme grant EP/K016288/1.
--
 Important benefits of new technology are the cost and its ability to survey a larger proportion of the asset stock in much shorter time than when CCTV is used alone. This technology is not intended to replace CCTV completely, but it enables the operators to reduce the survey costs and increase the efficiency and levels of customer service by focusing CCTV on those pipes where need is greatest and managing interventions through measuring objective change. SewerBattTM can also be used to confirm that interventions such as pipe replacement, rehabilitation or cleaning have been carried out to a satisfactory standard. A report commissioning from an independent consultant found that potential savings in the inspection costs from the application of SewerBattTM technology ranging from 35% to 82% could be achieved. These savings enable more focused CCTV inspection to be carried out on a given length of sewer network or permit surveys of larger pipe lengths a given inspection budget.
 Our Contact Map prediction method was ranked as the best ab-initio method in the CASP9 protein structure prediction competition
-Go-with-the flow was hailed as the most innovative app at the Festival of Digital Health, 2014 and we won the Runners Up prize. The event celebrated the cutting edge of health apps in the fields of gamification and self-tracking and included a live showcase of apps and games demonstrating innovation from UCL academics and SMEs. More details here.
-
-http://www.fdh.ucl.ac.uk/event/gamification-self-tracking-health-wellbeing/
-
-Subsequently I also won people's choice award for presenting our work at the Grace Hopper London Colloquium 2015.
-
-http://academy.bcs.org/content/london-hopper-colloquium.
-
-We were also finalists at the Social Innovators Challenge that was orgainsed and hosted by Healthbox, UCLB and Numbers4Good, in collaboration with Janssen Healthcare Innovation and Trafford Housing Trust, with support from the Cabinet Office
-
-http://www.healthsocialinnovators.org/
-The software is not yet used in the domain but it has led to new interest by companies and other researcher groups.
-Not yet used in the domain but led to interest from industry and connection with other research groups to further advance it. 
 Other researchers have built on this to implement their own approaches, and to compare to this one.
-PhD submitted in 2014. Software will be made available to research community in Insigneo Institute for In Silico Medicine at the University of Sheffield following successful defence of the PhD in viva examination.
-Not  yet since it is under trial.
 Vampire is used in many applications, including program analysis and reasoning in algebra by various universities and high tech companies.
 
 It is also a workhorse for trying new ideas in theorem proving. One can argue that many inventions implemented in Vampire, including indexing techniques, AVATAR architecture, and splitting methods considerably advanced the whole area of first-order theorem proving
 N/a
-Feeding into learning design at the OU and into CPD for teachers across Beds, Bucks and Herts (with a view to extend this).
-The software has been taken up by 3 leading academic groups in the USA and a group in Germany is also looking to adopt the software.
-Successively passed Technology Gate review with Airbus
 OOPSLA 2012 paper
-Extending the state of the art in planning with preferences
-New state of the art in planning in expressive domains, which has been widely used in applications.
-The code was used by my colleagues to simulate Spin-Orbit-Torque effects in antiferromagnets which has contributed to a breakthrough in AFM spintronics (PRL 2015, Science 2016). Development towards next generation non-volatile magnetic memory.
 Coastal Engineers are evaluating it for further funding
 Catalyst Manufacturers are funding application of it
 EPSRC has supported a follow-on Pathway to Impact project
 It has been downloaded over 20 times
 XBeach-G is increasingly used by coastal scientist to study storm impacts on gravel beaches. Consultancies are also starting to use it.
 Has been used in masters-level teaching at University of Bristol 2013 and 2014, approximately 250 students thus far.
-widespread use of basin-hopping
 widespread use of hybrid eigenvector-following
 It was subsequently refactored and incorporated in the development of semantic agent system software and used as part of the evaluation for 'SerenA'.
 xx
@@ -240,13 +171,11 @@ This tool led to two papers being produced
 MetTeL has been used in significant ways in a variety of major case studies with different collaborators.
 Subsequently used in several publications relating to research following on from this grant.
 This is having a significant impact on video game research, and is currently being adopted by many researchers as a way to develop and test their game AI algorithms, as well as being used in various computer science masters programmes.
-Work with AI Factory and used in
 This is an education tool. It runs alongside an academic paper on the subject
 The software has been successful in bringing industrial funding and consultancies into the laboratory. Some elements are licensed when used commercially.
 Several users globally have now reported on research results, including us, using the software
 hh
 The app and survey were deployed and used during the open day event which is documented as a separate research outcome.
-The code allows quickly fit a large array of data. The code is suitable for analysing temporal measurements of OH rotational and vibrational temperatures.
 Too early to say
 Too early to say
 Too early to say
@@ -264,8 +193,6 @@ Interest from many regional organisations in its use including The Lightbox, Wat
 Nothing to report.
 Nothing to report.
 Nothing to report.
-Nothing to report.
-Nothing to report.
 Discussions about involvement in designing PHP Language standard with manager from Facebook Inc.
 We also attracted students to develop further tools based on the PHP interpreter (taint analysis tool, Eclipse debugger, compiler).
 Discovered 2 bugs in Mozilla Firefox browser.
@@ -278,7 +205,6 @@ The application is open-source. NLP on social media data is hard. Content is oft
 The tagger is available open-source. Part-of-speech tagging tweets is hard. The tagger achieves competitive accuracy, and uses the Penn Treebank tagset, so that all other tools should integrate seamlessly.
 The application is open-source. Crowdsourcing is an increasingly popular, collaborative approach for acquiring annotated corpora. Despite this, reuse of corpus conversion tools and user interfaces between projects is still problematic, since these are not generally made available. The GATE Crowdsourcing plugin offers infrastructural support for mapping documents to crowdsourcing units and back, as well as automatically generating reusable crowdsourcing interfaces for NLP classification and sequence annotation tasks.
 The method is currently distributed with ONETEP, which in turn is distributed via both academic license and commercial license within the &quot;Materials Studio&quot; package by BIOVIA. Three papers based on the software development work are currently under review.
-Improved modelling of spray combustion processes accounting for dependence of modelling parameters.
 Quantitative determination of concentration of chemical components (lipids, proteins, DNA) and their spatial distribution in cells and tissues from label-free hyperspectral CARS microscopy data. The software has been made freely available, and has been utilized by several groups. It is also applicable beyond CARS data, to any dataset that requires a decomposition analysis (eg fluorescence spectra). It is becoming part of an image analysis suite embedded in an institutional image facility.
 Used so far by over 200 scientists in over 30 leading research labs worldwide
 Used by over 200 scientists in over 30 research labs worldwide.
@@ -290,8 +216,6 @@ Verification of several protocols of interest in networking and security.
 Preliminary work - research still ongoing
 Our step detection algorithms are now used heavily and our method for tracking PC's through time for multivariate signals has proved useful in the analysis of financial markets.
 No impact to date (just released)
-Nothing significant so far.
-A follow on project should see it developed it unique software for very high resolution FE modelling.
 Fourier resampling is a major element of the execution time for Density Functional Theory codes.  We have integrated TINTL into ONETEP and have achieved compelling performance results.  We are currently working with the ONETEP developers to deliver TINTL to ONETEP users.
 Firedrake has a growing community of users with whom we are working closely.  Some of the resulting papers are listed at http://firedrakeproject.org/publications.html.
 PyOP2 is primarily used as a component of Firedrake.  Firedrake has a growing community of users, evidenced to some extent by the papers listed at http://firedrakeproject.org/publications.html.  PyOP2 is a separate conceptual abstraction which is potentially usable independently.
@@ -299,12 +223,6 @@ OP2 is being adopted by Rolls Royce to support GPU and multicore acceleration of
 
 PyOP2, which is developed from OP2's concepts, is a key abstraction in the Firedrake Project (www.firedrakeproject.org).
 The app has been downloaded and played approximately 2000 times (via a combination of Goole Play and Apple app stores)
-Papers describing this code, together with applications of it, are currently being written up. The code itself allows for simulations of systems relevant to experiment to be carried out.
-Simulations results (using the software code) demonstrate the potential of the developed neuro-biologically inspired autonomous vehicle control methods and models, to simultaneously and more effectively track (in relation to conventional control methods):
-(1) desired longitudinal and lateral displacements, 
-(2) and vehicle speed changes, 
-(3) in addition to achieving the desired speed of response, whilst penalising excessive control actions - with significant potential implications for both fuel and emission economy.
-The project software, which has been made publicly available to maximise impact, is serving as a benchmark and an open-source testbed for research and development of both next generation assisted-driving and safety warning systems, as well as future safe, efficient and smart autonomous vehicle models requiring integrative multi-modal cognitive control technology. In addition, the simulation and cognitive control of realistic, validated car-like rover models (implemented in the project software) are serving as benchmarks models for research and development of next generation, low-cost, autonomous rover vehicle control systems for planetary missions.
 Used at many research centres, including NASA Langley.
 In a nutshell, the framework contains the code for modelling smart homes and communities. Also, it comes with two additional toolkits for optimisation and visualisation for smart home and community data.
 NILMTK v0.2 includes a combinatorial optimisation NILM algorithm. FHMM and Hart's 1985 algorithms coming soon to v0.2. More algorithms in the pipeline!
@@ -333,9 +251,6 @@ Downloaded by 7 users (Feb 2016)
 Downloaded by 4 users (as of Feb 2016)
 This field left blank
 First sparse direct solver to work on GPUs
-The analysis of images captured through standard and high-speed digital video microscopy enabled the determination of i) distributions of droplet diameters ii) distributions of levels of droplet deformation iii) droplet generation frequencies iv) droplet speeds.
-The two-phase flow dynamics and the droplet break-up process were simulated by solving the Stokes equations (Momentum and mass conservation) and the Level set equation through the Comsol microfluidics module. The outcome of the numerical simulations in terms of droplet size and generation frequency were qualitatively in good agreement with the experimental results.
-The heat equation was solved for heptane droplets both spherical and deformed, heated by Gaussian laser beams and immersed in either water or deuterium oxide bulk phases. The model inputs were i) the laser beam intensity profile -  obtained from numerical solutions of the Maxwell equations (in the modelling and control work stream) and ii) the deformed droplet shapes - experimentally obtained through structured illumination measurements (in the optics work stream). The model outputs were the temperature and the interfacial tension profiles at the droplet interfaces.
 This freely available software provides geneticists with an efficient way to simulate from the coalescent relating individuals sampled from a continuous space.
 Currently used in the design of Facebook's Aquila solar-powered aircraft.
 
@@ -353,20 +268,14 @@ MOSAICS provides applied scientists easy access to numerical methods in applied 
 The use of NMMC expanded the boundaries of computational structural biology with key applications such as aiding the design of RNA nanotechnology, increasing the resolution of macromolecular Cryo-electron microscopy, atomistic prediction of primary chromatin structure and the epigenetic effect, modelling diabodies that tune extracellular receptor signaling to counteract intracellular oncogenic mutations, deciphering important molecular processes of the adaptive immune response.
 This software has been developed over the last ten years by Peter Minary. The fellow funded on this grant (Konrad Krwaczyk) has been working with Peter to develop user-friendly interfaces and applications for this software in the structural biology domain.
 Convened an expert user panel to help test, revise and extend the ZOӦN framework and interface.
-Written to analyse data for the ionic liquid [EMIM][Tf2N] on Au(110) and produce a structural model.  Reported in M. Buckley PhD thesis.
-Being used to analyse the first variable period X-ray standing wave (VPXSW) data to be measured using photoelectron spectroscopy.  VPXSW can be applied to thick adlayers (ca 30 nm) and gives chemical state information on the adsorbates.
 This is a new international standard aimed at facilitating the sharing and validation of reconstruction algorithms.
 16,000 engineeris use the Tekla Tedds software and now have access to a unified approach to designinging timber frame racking panels inclusive of closed panel detailing.
 Implementation of convolutional LSTM, extending an existing public library for recurrent neural networks; code available online
 GPU implementation of a predictive-sparse-decomposition autoencoder; code available online
-Tools for real-time 3D reconstruction from videos based on ORB-SLAM system
-CSIC in-house software for FO data analysis
-There are two versions of this software and one (predominantly developed by them) is in use at the University of Oxford.
 Not at this time
 Not known yet.
 Twister was used as an essential tool to produce the data for Igor Rivin's paper &quot;Statistics of Random 3-Manifolds occasionally fibering over the circle&quot;.  See http://arxiv.org/abs/1401.5736
 .
-Widely used in academia and industry. The NMR functionality is widely used in the pharmaceutical industry.
 We cannot track exact user statistics of BEM++ since it is freely available from an open source repository. But it is currently being used by several external research groups.
 This will impact many studies by the UK modelling community, saving CPU cycles and therefore money on the ARCHER national HPC service, and moving some calculations which were not previously possible into the realm of feasibility.
 n/a
@@ -379,7 +288,6 @@ The skeleton is used for developing a new superpixel algorithm jointly with Micr
 This version of the code was used to run some of the simulations in &quot;Computational Assay of H7N9 Influenza Neuraminidase Reveals R292K
 Mutation Reduces Drug Binding Affinity&quot; Scientific Reports, doi:10.1038/srep03561 The emergence of a novel H7N9 avian influenza that infects humans is a serious cause for concern. Of the genome sequences of H7N9 neuraminidase available, one contains a substitution of arginine to lysine at position 292, suggesting a potential for reduced drug binding efficacy. We have performed molecular dynamics simulations of oseltamivir, zanamivir and peramivir bound to H7N9, H7N9-R292K, and a structurally related H11N9 neuraminidase. They show that H7N9 neuraminidase is structurally homologous to H11N9, binding the drugs in identical modes. The simulations reveal that the R292K mutation disrupts drug binding in H7N9 in a comparable manner to that observed experimentally for H11N9-R292K. Absolute binding free energy calculations with the WaterSwap method confirm a reduction in binding affinity. This indicates that the efficacy of antiviral drugs against H7N9-R292K will be reduced. Simulations can assist in predicting disruption of binding caused by mutations in neuraminidase, thereby providing a computational 'assay.'
 Used as part of CCP5 training workshops in Manchester in 2013 and 2014.
-Demo release of the Acquire job scheduler. The prototype version of the software developed to ease submission and management of jobs to distributed HPC clusters.
 The HTS toolkit is used worldwide by both academic and commercial organisations, such as Microsoft, Nuance, Toshiba, Pentax, and Google. The number of downloads of HTS exceeds 10,000 and various commercial products using HTS are on the market. Therefore, this toolkit is a very influential platform for me to disseminate outcomes and form an immediate pathway to impact.
 Commercial products from AT&amp;T.
 Spinout company Rhetorical Systems.
@@ -397,10 +305,7 @@ Improves outbreak analysis by allowing multiple data sources, visualisation and 
 Fairphone customers have been using the tool: http://designaday.fairphone-open.com
 The app was featured in several major art exhibitions and attracted media attention
 The app was featured in the Bernaducci - Meisel gallery show for Nathan Walsh in New York. It was very well received by gallery staff, critics and owners. The show sold out.
-ART has been used in a prototype model-based engineering tool under development in Eindhoven, and in use by their commercial collaborators (company confidential).
 Reduction in uncertainty in national electricity demand -
-Site users cite the comparison outputs to prove poor installation and get refund.
-4 cases.
 so far there was 1 download of the codes and 38 reads in Research Gate
 so far 95 reads in research gate
 33 reads in research gate
@@ -410,13 +315,8 @@ the paper has had so far 58 reads in Research Gate
 -	Offers the potential to widen access to behaviour change support / health information and advice by members of the public 
 -	Functionality offers the potential to improve the implementation and delivery of health behaviour interventions (e.g. harness context-aware sensing to deliver just-in-time interventions, use of notifications/prompts to encourage user engagement). 
 
-Enables faster and more meaningful analyses of data exports characterising participants' usage of digital health interventions.  Insights gained from the visual analysis can be used to inform subsequent statistical analyses where appropriate.  Vital for making sense of how participants have used an intervention over time to inform subsequent improvements to the intervention design/content and/or interpret health outcome data/self-reported engagement.
-software was used in a number of applications
 emotionsense was downloaded more than 3000 times.
 application can be used to perform studies with mobile phones. it was used in a number of studies.
-Not known as yet
-Not known as yet
-The model integrates groundwater and gaseous transport of C-14 species in a manner that allows these processes to be integrated into an environmental safety case.
 The code is one of the major components in the Automatic Statistician project:
 
 http://www.automaticstatistician.com/
@@ -428,38 +328,21 @@ Other third party users have downloaded and use the software in there research.
 GPflow allow a Bayesian nonparametric model, namely the Gaussian process, to be implemented on multiple distributed GPUs.
 publication
 publication
-We also provide experimental results that show that dependency based embeddings can outperform standard window based embeddings in many natural language processing tasks.  Specifically, for three different classification methods: a Support Vector Machine, a Convolutional Neural Network and a Long Short Term Memory Network; the use of our dependency based embeddings improve on question classification, sentiment analysis and relation classification tasks.
-Use of multivariable control to address combined longitudinal lateral vehicle dynamics control near the limit of handling, as reported in relevant publication.
 Development of Physics Modules for Simpleware - +SOLID, +FLOW and +LAPLACE - implementation in Simpleware software commercial release.
-High Impact
 In use by MRC, AHRC, EPSRC, ESRC, BT, InnovateUK
-We have found the app is a powerful tool to raise awareness of the potential of quantum technologies, by demonstrating that near-ideal textbook manipulations of quantum systems can now be routinely performed on demand.
 Led to a company formation - ManagePlaces, through which the technology is commercialised. ManagePlaces are incubated by the European Space Agency. ManagePlaces was a UKESNC Winner in 2013.
 Increasing commitment of funders to the idea of RRI will lead to growing demand by ICT research communities to understand ideas and principles and comply with evolving standards. The Observatory could be a focal point of the community and shape emerging policies and thereby the demand and need for its services. 
-Due to highly intermittence of solar radiation in cloudy conditions, it is difficult to calculate the solar uniformity of the solar flux at solar cell, which was developed by an automated process using the optical model.
-It predict the component level temperature within a CPV system and material's effect with the temperature.
-It enables to predict full performance of the CPV system which includes, optics, heat transfer and electrical performance.
-It optimise the AD system for a given climatic conditions
-This unique software enable to configure integrated renewable energy system for a cost effective manner.
 It has enabled the production of large quantities of research data.
 No specific impacts to report at this time.
 Cited in published work on the TRAAC model.
 No specific impacts to report.
-Several requests from fellow researchers to use the algorithms
 None yet.
 None yet
 Various groups have been using versions of GenLouvain since 2011, and it has been used in various publications by a diverse group of authors.
-The RADIANT software is currently being evaluated by both Rolls-Royce civil nuclear and Rolls-Royce submarines for commercial exploitation in collaboration with Imperia College London. This will result in improvements in radiation shield design resulting from more accurate and computationally more efficient solutions of radiation shielding problems. It is also likely to form part of automated radiation shield design software thus making radiation shield design easier and more efficient.
-The SPRUCE uncertainty quantification modelling and simulation software will be used extensively in the Rolls-Royce submarine programme and is a crucial part of the move towards Best Estimate Plus Uncertainty (BEPU) within the naval nuclear propulsion programme. This will improve the design, performance and safety of naval nuclear propulsion plants and submarines..
-The FISS nuclear criticality safety assessment modelling and simulation software will be used by AWE to investigate and model nuclear criticality excursions and safety of drums of fissile liquid. It will have a impact upon safer procedures for storage and handling of fissile liquids.
-The notable impact of this research was the development of software for Babcock and Wilcox Technical Services Group that enabled them to investigate the operational behaviour of their liquid uranyl nitrate fuelled small modular medical isotope reactor called MIPS. This work was presented to the US NRC as the underpinning science justifying the stated operational behaviour of the reactor.
 Cyclist was entered into and performed well in the new SL-COMP competition for separation logic theorem provers.
 First model checker of its kind, with potential applications to verification and software testing.
 First disprover for separation logic.  Opens up potential new applications in speeding up verification and automatic proof search, and in automated theory exploration.
 The development of the cutFEM software has allowed us to test and develop several new methods for multi physics coupling and we expect it to be adopted by the wider research community for the solution of optimisation problems, inverse problems or free surface problems.
-Acknowledged use in other publications e.g: Micromotors Powered by Enzyme Catalysis
-Krishna Kanti Dey, Xi Zhao, Benjamin M. Tansi, Wilfredo J. Méndez- Ortiz, Ubaldo M. Córdova-Figueroa, Ramin Golestanian, and Ayusman Sen
-Nano Lett., Just Accepted Manuscript • DOI: 10.1021/acs.nanolett.5b03935 • Publication Date (Web): 20 Nov 2015
 Use in various modelling studies / applications.
 DOI 10.7554/eLife.03908
 Softwares similar to this do indeed exist: the ERC project COMPOSES of Marco Baroni from  the Center for Mind/Brain Sciences of the University of Trento is one such example. But it is the first time that one can input different copora and datasets, as well as normalization schemes, and compare the performances of models across all the parameters, and further, display the results graphically.
@@ -472,7 +355,6 @@ None yet, it has just been completed.
 --
 --
 --
-This will be useful and openly available for anyone wants to matching the mobility data to maps.
 The app has received considerable interest from various community groups and a further version, Link Local was subsequently derived.
 Dialogue is currently underway with a British Motorsports Society (beermountain.com) to trial the Linklocal app at the Le Mans event in France.
 goWSB is holding a National Walking School Bus Competition to coincide with national walk to school week in May 2016. The app is being promoted to schools on the back of this (http://www.gowsb.com)
@@ -487,14 +369,7 @@ The app has been trialled on tourist communities in Dorset and has spawned two d
 The 6ST Oxfam app was used to investigate how smartphones could be used in a charity community to better manage the vehicles and stock in the network. Elements of the app are currently being take forward by Oxfam working with Keyfort Ltd.
 On general release through the Apple store
 Beyond use on the Reflect Project as a tool to help understand and measure the effectiveness of experience sampling (ESM) in comparison to alternative forming of sampling such as event reconstruction (ERM) a number of academic practitioners have shown further interest in using the XPR platform to support their research (Recall Project).
-The Affective Doodle Toolkit has been trialled in several different domains including a University foyer, a corporate office, a public museum, and transport conference (UTSG 2013). Over this period the Toolkit has received over 100 doodles in each location.
-The SWB Capture and Comparison app was trialled in November/December 2014 with 18 participants. Commuters in the Loughborough area were invited to a study consisting of using the app for 2 weeks, filling questionnaires and giving interviews. This study provided a proof of concept and data for academic papers to be published in 2015.
-Using the newly developed software and following the new methodology the whole new class of visco-elastic materials and their behaviour can now be described and understood. It is possible now to analysed and predict the visco-elastic behaviour of a larger class of materials taking into account their microstructure.
 SEMS has allowed us to monitor in detail how much trial participants have used their e-bikes (GPS) and how they used the assistance levels, for 100 trial participants, each using the bike for 6-8 weeks in 2012 and 2013. This data forms part of our empirical analysis of e-bike use.
-The system was made available to students taking a postgraduate Open University module in 2014. We found a significant positive relationship between the marks that were awarded for an assignment and the number of drafts of the assignment that the students had submitted to the system. As  a group, this cohort of students also obtained significantly higher grades than the previous cohort who had not had access to the system.
-Allows to model high-frequency MHD modes seen by MAST at CCFE, first publication by Sharapov et al. (2015).
-The code is now being used to provide detailed on flow and heat transfer in compression/expansion spaces in the presence of net flow through these spaces and (importantly) behind meshes/orifices which more realistically represent the flow that would be expected in high-performance such systems. These data will be soon provided to other groups (e.g. Denmark Technical University, University of Twente) who require this for advanced model and practical system development (e.g. by Isentropic Ltd.)
-The codes are being used to provide thermal and pressure (where relevant) loss variations with important design (e.g. geometry of the compression/expansion space) and operation (frequency, valve timings). These will form the basis of a closer interaction with the Universities of Ghent and Liege. Ultimately, an attempt will be made to incorporate these into libraries for the modelling of reciprocating machines, but also for suggesting next-generation high-performance compression/expansion machines.
 The associated paper was accepted to the International Conference on Software Engineering (ICSE 2016).
 The associated paper was published in the proceedings of the International Conference on Software Engineering (ICSE 2012).
 Used in several research projects.
@@ -503,17 +378,13 @@ Published in the proceedings of the International Conference on Computer Aided V
 - Library incorporated into software ACADO Toolkit (http://acado.github.io/)
 - Library used in CRONOS (https://bitbucket.org/omegasoftware/cronos)
 No significant impact to date
-Ability to provide real time real condition maritime FSR demonstrator.
-Presented to industrial collaborators proving capabilities and potential of FSR.
 Building on the implementation it is much easier to formalise and implement other auction schemas.
 Anecdotally, the wiki has become widely used in the CRNT community. This was visible recently at a CRNT workshop in Portsmouth, where we found that a variety of academics from the UK, Europe and North America all regularly use it as a reference tool when writing papers in this area. One expected long term result is a harmonisation of language and basic assumptions across CRNT research communities with somewhat different frameworks and histories, allowing greater scope for collaboration and communication between these communities.
 The tool, which is under continuous development, has become quite widely used within the chemical reaction network theory (CRNT) community. Development has also been opened up to the wider community and modules have subsequently been added by researchers not originally part of the development team. The goal is both to allow new results which naturally take algorithmic forms to be made widely available, and to provide an open source alternative to some of the closed source CRN analysis software currently available. We expect long term impact to be significant.
 Used by about 140 chemists.  Used in teaching at Leeds
 Leakwatch shows that information leakage estimation is possible for large Java programs.
 An ARCHER resource allocation panel (RAP) application was submitted and approved 21 October 2014 for 26,327.51 kAU, running this code to investigate atomic bonding and structure of materials
-Enhanced modelling capability
 It is anticipated that, together with publication in the IEEE Trans. Image Proc paper, this code will help publicise the work and help foster future impact
-A CCPBioSim training workshop using this new version of the software will take place on November 25th 2014 at the University of Southampton. Academic and industrial users will attend from the UK.
 This software is being adopted by other academics and some industrial partners are also using it.
 A conference paper listed separately and ongoing work as part of the EPSRC programme grant FAST-IMPACT.
 The corresponding demo has been discussed within the MPEG consortium.
@@ -521,23 +392,14 @@ The POWkist demo highlights linked data technology in historical / archival cont
 Application downloaded by over 500 people; average review score 4.8/5
 Use by other international teams in research
 The software has only recently been developed and is still be actively tested.
-This software is key to the operation of the iPerfusion system. This system led to several collaborative projects.
 Used for teaching NMR simulations at graduate level (CDT).
-Testing and revising a number of prototypes also gave insights related to design issues. Each prototype had different benefits for difference group of users and it could not be said that one is better than the other.  We are also not advocating replacing physical activities with only virtual activities.  Instead, we believe that VW can provide interactive experiences to promote a continuing selfhood which may have been lost due to dementia and/or moving to long-term care facilities. It can also provide stimulation and engagement to promote a feel good factor. Negative memories could be mitigated by playful design. VW could also be a "place" that allows staff and residents to foster personal relationship and trust, which may improve care.
 The program is used in the academic community of researchers in physics, applied mathematics and life sciences, investigating effects of delay.
 The software is still under development, but we have received a request for additional knot theoretic features as an aid as a research exploration tool.
-A PhD student, Miss Zuochao, is using this softwere for her PhD thesis. Some results were used in published journal papers and new proposals.
-This software architecture is generic, modular and reconfigurable.
-The software has significantly reduced the time required for annotating benchmark datasets required to evaluate constituent (vision-based) software functional blocks of a planetary GNC system. This software can be easily adapted to annotate datasets related to other problem domains.
 Application knowledge regarding one of our industrial partner's work processes has been input and created via KEWI.
 The software describes and allows one to analyze some of the processes of the supporting organisation.
 The tool is still in development but it has triggered a wider interest in the argumentation community with a number of researchers enquiring about further developments.
 The demonstrator is developed continuously throughout the project. Several publications were based on this demonstrator and it is a very helpful tool when explaining the research to industrial contacts (e.g., DEMOfest 2013 (Glasgow), DEMOfest 2014 (Aberdeen, Edinburgh) and meetings with Schlumberger).
-software presented to Dstl 
-published journal paper on it
-Not yet and project investigators just started to use it.
 The code is under continuous development but will be used in subsequent publications related to the grant.
-The software has enabled joint publications with international collaborators (Amsterdam, New Zealand) and provided the basis for a new collaboration (Beijing) as well as supporting 3 projects in the EPSRC imaging Centre for Doctral Training at King's College London
 An outstanding feature of our approach is that the control techniques we are developing are solely based on input-output data readouts from the network, with the goal to provide optimal and robust operation of potentially poorly characterised or unknown networks. We call such an approach data-based optimal control as opposed to more classical model-based approaches. Data-based methods aim to infer/learn a feedback optimal control law from input-output data collected from the system, i.e., from the way the output of the system reacts to various perturbations at the input of the system.
 Prediction and control of behaviour and abnormalities in any complex dynamical network, and in particular in those encountered in biology require the development of multivariate predictive models that integrate large dataset from different sources. Although, a large amount of data are being collected on a daily basis, very few methods allow the automatic creation from these data of nonlinear Ordinary Differential Equation models for understanding and (re-)design/control, and an inordinate amount of time is still being spent on the manual aggregation of information and expert development of models that explains these data.
 
@@ -548,9 +410,7 @@ The software was disseminated to industry via SICSA Industrial Proof of Concept 
 The software was disseminated to industry via SICSA Industrial Proof of Concept grant (2013-2014).
 This software was taken for further development by a new EPSRC grant  Coalgebraic Logic Programming for Type Inference: parallelism and corecursion for a new generation of programming languages for parallelism and corecursion, 2013-2016.
 Initial studies in November 2013, using scans of fragments of a synthetic fresco, have shown that the user feedback collected that way is effective and helps increasing the quality of our match suggestions to conservators who reassemble a shattered wallpainting. The next step of evaluation, required to finalise the app, will be to run the system alongside the assembly of a Late-Bronze-Age fresco that has not been assembled previously. However, due to local constraints on site, it was not possible to conduct this experiment with our partners at the Akrotiri excavation. We still plan to run the fully-fledged study as soon as the situation on site has changed (hopefully in summer 2015), which will aim at including the regular visitors to the Akrotiri excavation as test subjects, too. Ultimately, we believe that the software will be able to assist various assembly projects in cultural heritage applications, and that its development will spawn additional, similar projects.
-ONETEP is continually developed and new, updated versions are released on an annual basis. The developments associated with this grant were released during the period of the grant, between 2009 and 2013. It is one of the leading codes of its kind in the world and unique in being sold commercially: in 2004 it was adopted by Accelrys (now Dassault Systèmes BIOVIA), a leading scientific software company, as the flagship for a new international Nanotechnology Consortium of mainly industrial and government partners, leading to its launch as a new product within the Materials Studio suite of software in 2008. An inexpensive academic license is also available worldwide direct from Cambridge Enterprise Ltd. Total revenue from ONETEP to date exceeds $4.5M from over 200 organisations worldwide.
 The availability and maturity of this software has been a significant factor in many established and new collaborative partnerships.
-The software has been adopted by several research teams around the world for this data analysis, and several publications have appeared using data treated by this program.
 AccessiblePeakMeter received the Best Solution by a Large Organization award in the AT&amp;T and New York University Connect Ability Challenge, a global software competition for software technologies that improve the lives of people living with disabilities. The winner were announced on Sunday July 26 2015, the day of the 25th anniversary of the Americans with Disabilities Act.
 Public release on Apple iTunes
 Provides a new way to make accessible interfaces
@@ -564,10 +424,8 @@ The paper that reported this tool has already attracted a large number of citati
 The Picasevo app is available on the itunes store and so is accessible for anyone with an iphone/ipad. It gives the general public some insight and intuition into the concept of Pareto optimality and is a playful way of presenting research to the general public.
 Menpo project was used to develop the first 3DMM built from 10,000 people. This is, to  the best of our knowledge, the largest scale
 3D Morphable Model ever constructed, containing statistical information from a huge variety of the human population (different age, gender and ethnicity groups).
-Used in EU project Des-MOLD to support engineering design
 None to date.
 none to date
-The software has not yet been distributed. Extensive tests are being carried out.
 This code has been downloaded and used by many research groups around the world. For example, of the 34 publications listed on the oxDNA web-site that use the model, six are by non-Oxford groups, including one recently in Science (Science 349, 977-981 (2015)).
 The software is being used in the European seventh framework project NoTremor (http://notremor.eu/notremor/)
 This software allows computational neuroscience models to be easily simulated on the embarrassingly parallel hardware of modern NVidia graphics cards, vastly decreasing the cost required to improve simulation performance.
@@ -579,28 +437,17 @@ The system provides 3 key elements:
 1) A timeline which provides instinctive chronological flexibility consisting of multiple arrays of time-scales - days, hours and minutes. The user can expand or contract the timeline allowing the user to manipulate the volume of displayed documents. 
 2) A zooming functionality, created by fixing a camera to the 2D x-plane in the 3D environment, facilitates user controlled data convergence. This allows users to zoom in and out of the Z-axis which changes the distance of the camera plane in relation to the displayed objects. The user can control the amount of documents currently on display by the system. Furthermore, it allows the user to focus on clusters of documents that may be of particular interest.
 3) The visualisation of information through inter-document relationships. The system database contains a vast range of data which is used by the system to create arrays of objects which have underlying connections. These relationships are used to generate the default GUI.  The goal of exploiting the underlying relationships is to allow the user to quickly retrieve information based on whatever knowledge they have relating to the search.
-Already written at least three times in the other forms. We supported emergency control rooms in events involving over a million people, including the Glastonbury Festival in 2013 and 2014
 The tool has been tested by medical students at the Southern Medical University, China, with some promise. We plan further  development and testing. It has also been presented at CIMA-14 Workshop, 4th International Workshop on Combinations of Intelligent Methods and Applications
 The tool has been published in a workshop for now (CIMA-14 Workshop, 4th International Workshop on Combinations of Intelligent Methods and Applications). We plan to present it to several possible interested parties. It can be assessed with login housei, password housei, with i=1,...,4
 grapharg is a component of the medical decision support system www.justimed.com. It has been presented at a workshop (TAFA2013)
 Interfaces are provided to a variety of external atomistic codes, such as VASP, CASTEP, CP2K and LAMMPS
-Please refer to physicist users of QUIP.
 The UCL Genetics lab on Healthy Aging is using this software on a daily basis to measure the number of fly eggs in their vials. The number of eggs is an indicator of fly health.
 N/A: This software has just been released online, and the public announcement is pending.
 new collaborations with various physical chemistry groups; concrete impacts likely to be realised over the coming months.
-This is used to produce electron vortex beam mask
 Significant digital presence of the JQC. Has helped us become more broadly known internationally
 For the first time researchers applying for capital funding for equipment can determine whether there is already a capability in the region and through the data published it is possible to systematically contact an appropriate local contact to answer detailed questions or make arrangements to collaborate. This has allowed the participating Universities to certify with confidence that bids for new capital equipment funding do not duplicate existing facilities unduly.
-RFID PLC Code
-Web service for the collection of RFID data from portals.
 User Interface for the representation of RFID traceability
-Software for the detailed interrogation of portal hardware in order to diagnose and fix issues
-Code to log and distribute error information for maintenance and administration purposes
-Modelling software respresenting product flow in an automotive manufacturing environment
 Unity game engine development of the visualisation for tracking RTIs.
-Information previously un-captured is now being collected to aid process optimisation as well as conformance to newly introduced industry standards.
-Web interface displays information, real-time to end user.  This information was previously very limited as well as having a high lag.  It has also allowed compliance to new industry standards
-Novel system which autonomously collects information unique to the manufacture of the product.  The granularity of information collected is much higher than currently available in this domain
 Portrait has been demonstrated to a number of care facilities and local authorities to promote its use within care settings. Portrait has been in use  a care home for over 3 years.
 The source codes have been used by some researchers to compare their optimisation algorithms for solving dynamic travelling salesman problems.
 Just put online recently.
@@ -610,48 +457,15 @@ M. Mavrovouniotis, C. Li, S. Yang, and X. Yao. Benchmark Generator for the IEEE 
 
 This Technical Report is available from http://www.tech.dmu.ac.uk/~syang/ECiDUE/TR-ECDOP-CompetitionDTSP14.pdf.
 This is a mobile augmented reality application developed to raise awareness of the research carried out between Lancaster University and the village of Wray in Lancashire during the last 10 years.  The mobile application offers a digital enhancement to the annual Wray scarecrow festival: allowing visitors to select past scarecrow festivals to experience and then display scarecrow images from that year at the relevant locations as they move through the village, thus, allowing them to traverse both time and space.
-This will be the first software tool for the whole CAES system dynamic modelling and simulation.
-The concept demonstrator was presented as part of the 2014 BEHAVE conference in Oxford and formed a central part of end user evaluation trials being conducted in collaboration with University of Plymouth collaborators.  The demonstrator has undergone a recent (November, 2014, Summer 2015) modification based on early user trials and a second, more game-like inplementation has been developed.  The desktop and immersive versions of the eViz apartment were also demonstrated to representatives of SSE plc (formerly Scottish and Southern Energy plc) at a special workshop hosted by the Edne Project in the Summer of 2015.
-Used (and designed with) local group of people in the UK
-
-Used in teaching in HCI masters class at University of Bath
-
-Used in teaching in University of Oulu
-Research using the eViz energy diary led to a poster presentation at the Biennial Conference on Environmental Psychology 2013
-- Studies using the eViz VR flat have so far led to a paper published in the conference proceedings of BEHAVE 2014, and a journal paper is under review. 
-- A presentation on the eViz VR flat at the Biennial Conference of Environmental Psychology 2013, led to an invite to speak at the University of Nottingham
-- The eViz VR flat was used as an engagement tool at the Regen SW renewable energy market place by the eViz team. This encouraged members of the public to visit the eViz stand.
-Demonstrated internationally and software now made available to particular community group
 This software is used as the basis of the EU FP7 funded ORIGIN system. This software was also used extensively in a Top and Tail Transformation project funded through HubNet.
-n/a
-This proposed work is extremely relevant to this call under the Digital Economy theme. Food is of
-key importance in a sustainable society. Plant diseases are a major foe to global food security,
-which have the potential to significantly decrease crop yields and increase postharvest losses,
-especially in the face of climate change. Disease prevention and management are essential for the
-sustainability of our society. This project aims to develop a software tool to effectively detect crop
-diseases, reduce yield losses, improve food security and therefore achieve sustainability.
-see above
-The above paper has been accepted for presentation in the UK-Ireland Planning Research Conference 2015 in London 9-11th of September 2015. 
-
-Preliminary findings from the app work were also presented in the AAG2015 in Chicago 21-25th of April 2015: AAG Panel 2540 The Ecosystem Approach: A new tool for Urban Development? 
-
-We have also secured funding to continue working with the app  to record experienced environmental quality in Brazil. This is an ESRC-CONFAP co-funded collaboration and research project entitled  ADEPT: developing the ecosystem approach to drive positive urban transformations
-in the context of intersecting vulnerabilities. 
-
-In terms of impact, the Woodberry Down estate is a hub of regeneration and social housing development and we've had a lot of interest from the local Manor House Development Trust who have been an important gate keeper helping us recruit participants. The app is also being trialled by the Genesis housing association that operates in the area and I have introduced the app and preliminary findings to the board of Woodberry Down Community Organisation, Berkeley Homes and Genesis as well as Hackney Council. While no specific impact has emerged yet, there appears to be interest in our findings and in appropriating the app for different local uses.
 There were 322 registrations to Systems-NET through this website and various other registrations to Systems-NET events.
 This software package is one of a handful of 'recommended' packages supplied with the base distribution of R. Previous versions have been widely used in a wide range of applications, particularly in ecology and natural resource management, as well as medicine, epidemiology and economics. For example the energy company EDF use the methods for electricity load forecasting. In addition the package is currently used by 102 other software packages for R. For example the underlying fitting methods are sufficiently general that they can be efficiently leveraged for functional data analysis, as in the 'refund' package.
 Used for energy load prediction problems by EDF (France). Collaboration with EDF to improve methods for this purpose.
 The STIR software package has a relatively large user base; the additions are mainly of interest to the small but expanding community who have PET/MR and who wish to experiment with alternative reconstruction algorithms.
-There is considerable interest from the user community in this novel software; the open source softwrae will allow groups to test the algorithms in their own lab which should build confidence in the developed methods.
 This software is available for sites to evaluate the effectiveness of the software. This faciltates cross-comparison with other approaches.
 Code is online for other researchers to enable full scientific reproducibility of results.
-This is later used to develop a dictionary of low noise templates.
-The algorithm is at the heart of the 'smart technology' on which Tempus Energy's business model is based. So far Tempus Energy has raised over £5 million in venture capital and grant funding.
 Significant acceleration of fluid-structure periodic instabilities prediction; ability to predict aero-structural instabilities at transonic Mach numbers efficiently and reliably.
 There is a growing community of uses of this system, and companies such as EDF Energy in France are already using the system in a research setting. We hope to find industrial partners to license the system.
-This development is now producing some of the first studies of the effect of neutral gas on turbulence in the edge of tokamak devices.
-Models of a range of industrial and academic culture systems that have defined further experimental work and identified mechanistic behaviours and operational risks. Outputs in preparation.
 No notable impacts yet. Some downloads and interest.
 No notable impacts yet. Some downloads and interest.
 Some downloads and interest. Too early for notable impact.
@@ -674,22 +488,11 @@ AccessiblePeakMeter was shortlisted for QM Public Engagement Award 2015.
 AccessibleSpectrumAnalyser is a real time spectrum analysis plug-in that allows visual impaired users to inspect spectrograms using the same sonification as the accessible peak meter. Instead of monitoring the amplitude of the audio signal though, you will be monitoring the frequency components of the signal within a customizable selection of frequencies.
 Not currently known.
 Not known.
-It is expected that the project will help to inform decisions regarding how to store, process and share metadata and feature data from licensed audio collections.
-
-The project supports ongoing development of a Proof of Concept mobile app which creates playlists and music recommendations by interacting with a server back end.
-
-Development of server middleware which utilizes the SPARQL endpoint rather than a company-specific database is ongoing. Using the SPARQL endpoint will enable the Proof of Concept mobile app (see 12) to access audio feature data from multiple collections, rather than the single collection used to date.
 No  notable impact yet. However, our work on MPEG-A: Interactive Music Application Format (IM AF) has inspired not only commercial products such as STEMS by Native Instruments but also artists such as Emilio Molina Martínez (ES),  Tracy Redhead (AU) &amp; Imogen Heap (UK) releasing raw music material (i.e., multi-track audio, lyrics, album cover and credits) suitable for IM AF encoding.
 The tool was the first to implement an automata based approach to the verification of higher-order recursion schemes.  It also was the first to use a &amp;quot;saturation&amp;quot; method.  The tool showed that this approach is competitive with existing approaches and inspired a further tool (HORSAT) to be produced by Naoki Kobayashi's group in Tokyo, using similar techniques.
 Research tool.
 The research is not finished yet. It is still a prototype and it has not been released publicly. It is currently being used for th project's experiments. Once fully tested and completed it will be released in the public domain as open-source software.
-The research is not finished yet. It is still a prototype and it has not been released publicly. It is currently being used for th project's experiments. Once fully tested and completed it will be released in the public domain as open-source software.
-It can/will be used within business process recommendation systems.
-The tool is still at a prototype and will be distributed among commercial partners once it is fully developed.
 Algorithms that feature in these web applications are used by NHS Blood and Transplant for quarterly matching runs of the National Living Donor Kidney Sharing Schemes.
-Collaboration with North Western University, China, under a Royal Soc. Exchange visit
-Collaboration with Helmholtz Zentrum Dresden Rossendorf (HZDR) 
-Collaboration with Alabama University
 The tool has been used by ARM, Imagination Technologies, and has received interest from other partners.
 Universities participating in the Student Switch-Off Campaign are having to install automatic meter readings via SMART meters. Whilst there is a only a sample of EU Universities at present this still equates to: 
 8% average reduction of electricity usage, compared to baseline year, across
@@ -707,39 +510,18 @@ into private accommodation once they have left dormitories
 carrying forward their energy-saving habits into private accommodation
 • Project continues to expand on a self-funded basis, reaching 257,805 students in six
 European countries by Sept 2016
-SHARE-IT achieved a quality of implementation that makes it fit for use as the basis for a number of different applications.  It is currently trialed in India as part of a project aimed to ascertain its cross-cultural viability as well as the computer platform for a neuroscientific intervention aimed to support primary school children in learning counterintuitive concepts in mathematics and science.
 The notable impacts resulting from the application of the software is the generation of real-world applicable decision support outputs which directly inform the current draft planning documents for a number of Western Australian recovery catchments.
 The use of this app in a rural rather than urban environment further allowed the research team to investigate its benefits and limitations, while also introducing the technology to a new audience.
 The final version of the app allowed for continuity to be examined between users of Greendoors 2013 and Greendoors 2014, e.g. did familiarity with the app encourage a larger number of downloads or more indepth use?
 This version of the app was greatly improved from the first iteration, and the creation of live reports allowed users to get the information they requested in a more timely fashion.
 Users of the Greendoors app were able to access additional information about retrofitting measures, thereby making the research process much easier.
 The software is being used by local community as Peat Trade
-- Trialled with Carillion management personnel in Redcar
-- Included as a example innovation case study in Carillion's bid process for the Redcar highways maintenance contract
-Trialled in Redcar with highways maintenance operatives
-.
 School pupils and teachers gain an understanding of how much and where energy is being used in their school over a week. Data allows comparison between school days, and subject areas. This is supported by teaching material that encourages further discovery and discussion around the value of energy.
 
 The app will be rolled out to 20 schools in Edinburgh as part of an energy awareness campaign.
 Tools for experimental optimisation by analysis of preliminary structure results are included in the CRYSTALS software package. We are currently writing up the theory and applied examples with recommendations to allow other groups to follow the methods.
 Existing software tools for designing crystallographic experiments are often closed-source and are limited to standard experiments. Scientists are left with great challenges to exploit new instrument technology for non-standard data collections like photo­crystallography. The tools presented here have been used to create experiment strategies in-house and at Diamond Light Source, by Oxford researchers and by beamline staff. The software has also been used to support developments of a time-resolved crystallography instrument at University of Nancy.
 There has been increased engagement on social media (Blue-Green Cities twitter feed and LinkedIn Group) since the Blue-Green Cities website was released. The website also provides an outlet for BGC outputs (conference and journal papers) to be downloaded, thus enabling the research findings to be disseminated to a wider community. Requests for information on the project have also directly come through the website.
-Speed and accuracy of parameter extraction allowing analysis of results to be done post collection.  The software was then used to update software to provide more accurate real-time feedback.
-Gives coaches and athletes a more robust tool for monitoring their performance in real time, as well as having the functionality to look back on previous efforts.
-Ability to monitor and store results from elite athletes using the system to monitor their performance and provide coaches with information to assist them make training program decisions.
-The web interface provides correctly scaled visualisation of the data in real-time, offering the ability to monitor energy consumption as the machine is running.
-Information that would only be available on an instantaneous basis is securely and reliably forwarded, stored and accessed.  Parameters, such as communications rate, current and voltage gain and current wiring configuration, that could only be changed by modification of energy monitor firmware and re-installation of these devices can now be performed remotely while machines are running.
-Enables data which could ordinarily only be locally and instantaneously monitored on an LCD display to be transmitted over the Internet for real-time processing by analytical services and real-time monitoring via web interfaces.  Supports remote reconfiguration of device firmware parameters, which otherwise could only be modified by firmware update, entailing physical access to the energy monitor.
-Research into implementations of CPS at End of Life Electronics
-Research into the methodology and architecture for CPS
-Research into how Industrie 4.0 can be extended to the end of life (not just for manufacturing)
-Novel, adaptable, route decision service
-Supports optimal process scheduling to reduce total plant consumption and energy, reduce waste and avoid excess usage charges.  Enables reduction in the amount of data which must be captured, stored and forwarded in order to monitor the energy consumption of a high power machine.
-Reduced infrastructure impact and cost of equipment through the use of sensor nodes to range and trilaterate location, in comparison to approaches using RFID tags (distributed tags and readers robustly supported and maintained throughout the environment); WiFi and Ultra Wide Band (requires complex and costly infrastructure of cables and nodes).
-Without this software the capturing of RFID performance data from RFID readers was slow and cumbersome. RangeFinder has allowed experiments to be carried out at a much faster pace and with a unified interface.
-The EIIS Track portal is key for the dissemination of data collected by RFID portals located on the shopfloor.
-It's filtering services have the ability to determine the state of the shopfloor based upon current and previous portal data entry.
-By developing a PLC based API, RFID readers can be integrated with existing machines and manufacturing systems that utilise Siemens PLCs for control. Thus, reducing the impact for IT infrastructure and cost of implementing RFID technology within manufacturing.
 To date, the developed software has only been evaluated with a small user group of parents. They have used the prototype to maintain a digital record of daily behaviours, exhibited by one or more of their children. 
 
 Qualitative feedback (please see key findings description section) supports envisaged benefits of use of this tool as an interactive assistive technology for streamlining and augmenting data collection procedures within the home environment and / or other pertinent environment, such as the classroom. 
@@ -748,13 +530,9 @@ Initial findings from this research have been reported at the 12th International
 The developed web tool automates many of the manual processes currently employed by parents and Behaviour Analysts (BAs) within a home-based autism intervention setting. Specifically, the tool provides instant visualisation of recorded data through the provision of a user driven user interface that aggregates, summarises and showcases clinically important patterns in behaviour. These visualisation services alone offer significant potential for increasing BA's ability to discover behaviour patterns and to subsequently introduce more timely home-based intervention treatments. 
 
 The visualisation service is further supported via a data mining service that highlights (based on the application of association rule modelling) the 'predicted' causes and effects of particular behaviour by mining previously recorded data from one or more individuals with autism. The service, while requiring further validation through longer user evaluations to generate more data, has the potential to reduce the workload of BAs by supporting them with functional analysis of a child's behaviour.
-Based on the feedback from 20 participants (4 parents (Phase one), 8 child-parent groupings (Phase two)), the findings positively support the potential utility of LifePal, however, highlight the importance of delivering sufficient user training to support adoption and the need for longitudinal evaluations.
-
-Among the most highly rated features were both life-logging and the rewards service which included the facility to generate a personalised contract between the parent and child. Another interesting observation was that younger users found the App easy to use while parents reported a learning curve associated with the web portal. In terms of qualitative feedback, parents praised the concepts of the platform, high-lighting the advantages of delivering services via technology in comparison with paper-based approaches. They also indicated that LifePal added structure to their child's day, allowing them to know what lay ahead and provided them with a safe space to life-log in a non-verbal way. 
 The public release was within the past 6 months, so impact is only starting to feed through.  I have been contacted by academics using the software to explore homomorphic encryption for the first time, becoming interested in the potential for its use in statistics and machine learning.  A startup company, Numerai, have also been in contact and are exploring its use in sharing sensitive data to designers of proprietary algorithms, where both parties require privacy.
 The public release was within the past 6 months, so impact is only starting to feed through.  A startup company, Numerai, have been in contact and are exploring its use in financial forecasting.
 The SHARC Locative Media framework is underpinning the locative media experiences associated with the &quot;Streets of Mourning and Community Memory in Lancaster&quot; (see follow on funding)
-At the moment, the software is not publicly available, but it is used by members of the project for research purposes.
 The software allowed us to verify certain identities which are important in connection with Beauville structures and may ultimatively be useful to find a proof of our &quot;finite width conjecture&quot;. But this is a long-term aim.
 The software is useful to find polyhedral complexes with certain properties or to prove that they do not exist. This is part of a larger project overseen by Alina Vdovina.
 Annotation Master has been used for obtaining continuous annotations for the MAPTRAITS Continuous Dataset that has been subsequently used for the MAPTRAITS'14 Challenge.
@@ -765,12 +543,6 @@ libkalibera has been added to and used by other authors e.g.:
   Dynamically Composing Languages in a Modular Way: Supporting C Extensions for Dynamic Languages. Matthias Grimmer, Chris Seaton, Thomas Wuerthinger, Hanspeter Moessenboeck. Modularity 2015 (to appear)
 Improved accuracy of products producing using flexible spinning machine
 Improved possibility of using flexible spinning machines in place of conventional spinning machines
-This software is at the heart of several current multi-disciplinary collaborations, including polymorph screening, materials discovery and crystal structure determination.
-More efficient design, deployment and verification of PLC code.
-Has the potential to radically improve the efficiency of the engineering supply chain in the automation sector.
-This tool is being used for virtual modelling and validation of assembly systems at a number of industries (such as Ford and JLR)
-This software has a potential to significantly reduce the down time of production systems by alerting the technicians and providing them all relevant information regarding the fault and the equipment.
-This software is still in development phase.
 Has been used by other researchers in machining and retrieval applications
 An invited paper to a special 50th anniversary issue of IMA J. Appl. Math will describe the background to the software, and its significance. This will aid with impact in the field.
 It has been released on CRAN
@@ -783,8 +555,6 @@ The CoCoA [NIPS 2014] / CoCoA+ [ICML 2015] distributed optimization algorithm de
 About the award: &quot;This year, we started a new award program called the MLconf Industry Impact Student Research Award, which is sponsored by Google. This fall, our committee of distinguished ML professionals reviewed several nominations sent in from members of the MLconf community. There were several great researchers that were nominated and the committee arrived at awarding 2 students whose work, they believe, has the potential to disrupt the industry in the future. The two winners that were announced at MLconf SF 2015 are UC Irvine Student, Furong Huang and UC Berkeley Student, Virginia Smith. Below are summaries of their research. We've invited both researchers to present their work at upcoming MLconf events.&quot;
 
 The citation: &quot; Virginia Smith's research focuses on distributed optimization for large-scale machine learning. The main challenge in many large-scale machine learning tasks is to solve an optimization objective involving data that is distributed across multiple machines. In this setting, optimization methods that work well on single machines must be re-designed to leverage parallel computation while reducing communication costs. This requires developing new distributed optimization methods with both competitive practical performance and strong theoretical convergence guarantees. Virginia's work aims to determine policies for distributed computation that meet these requirements, in particular through the development of a novel primal-dual framework, CoCoA, which is written on Spark. The theoretical and practical development of CoCoA is an important step for future data scientists hoping to deploy efficient large-scale machine learning algorithms.&quot;
-Lead to publication of a mthods article as well as PoP letter 'Spontaneous toroidal flow generation due to negative effective momentum diffusivity', and to funded collaborations with experimental tokamak research groups via EURATOM.
-
 Range of geometries on which the library's Nedelec implementation if valid has been vastly improved. Previously only rectangular-faced geometries were possible.
 A journal article has been submitted to Computers and Structures and is under review.
 The code has been provided to our collaborators in Cardiff University who intend to develop a parallel version of the software.
@@ -806,18 +576,11 @@ Publications. Further funding. Preliminary ndustrial adoption.
 Publications. Further funding. Preliminary industrial adoption.
 Publications. Further funding. Preliminary industrial adoption.
 DOI: 10.1016/j.cpc.2014.07.011
-This new model has enabled us to investigate the effects of the growth of 3D asymmetries on the performance of inertial confinement fusion capsules on the National Ignition Facility, including the effects of asymmetry in the driving radiation source and defects in capsule manufacture.
-This software has enabled accurate calculations of radiation cooling rates in large scale radiation hydrodynamics and MHD simulations of high energy density plasmas. It also enables the generation of synthetic experimental X-ray spectra to be generated in post-processing calculations as well as the generation of detailed opacity tables for use in radiation transport models.
-Generation of much higher level of interest in WAAM technology and therefore industrial partners joining the WAAMMat programme.
-It greatly reduces the time required to optimise the output window for gyro-TWAs.
 EvoSuite is used by several research groups and practitioners.
-None
-None
 None
 * I am using it to optimise the design of arrays of tidal turbines for MeyGen Ltd (renewable energy).
 
 * I am in initial discussions with VerdErg Ltd to use it to improve the design of their renewable energy device. This will be the subject of a future proposal to Innovation UK.
-The bridging of an important gap between frontier mathematical advances (crossing numerical methods and multi-resolution analysis) and what is current emerging in hydraulic modelling.
 The introduced block-circulant embedding method (BCEM) can outperform the classical circulant embedding method (CEM), which requires a regularization of the irregular grid before its application.
 This is being used by the project in future developments
 This package disseminates the Netdis algorithm for network comparison. We have already had some queries about it.
@@ -828,41 +591,21 @@ http://www.engadget.com/2014/10/06/cowl-web-privacy/
 http://www.networkworld.com/article/2691741/microsoft-subnet/researchers-unveil-cowl-a-new-system-to-protect-surfers-privacy.html
 None yet. Note that, since the associated paper is under anonymous submission, we cannot openly publish the URL of the tool except via application to the PI. This will change once the paper is accepted.
 The NetAgg platform was exploited as part of the HARNESS European FP7 project in order to demonstrate the performance benefit that it can bring in heterogeneous cloud environments.
-Once deployed, the software would allow to 1) gather insights about the ever evolving malicious DNS infrastructure used by malware and 2) generates smart black lists to be deployed by the community at large (deployment is private for the time being; we need to finalize large-scale experiments and to secure additional data feeds before releasing it to the public).
-Work in progress
-We are using this evaluation internally across projects, but we plan to release the python library open source for the community to provide statistical evaluation to machine learning tasks.
 Users can apply the new functions for evaluating the quality of a clustering and specific clusters in flexible ways, depending on the aims of the data analysis.
-The first approach to provide near-instantaneous measurement of density and three components of velocity spanning an extended three-dimensional volume.
-Insight into the time-varying modal structure of both linear and nonlinear flows. Has been applied across a broad range of flows in the laboratory.
-A conceptual design for a soft open point has been produced, using power electronic switching. It is able to independently control the transfer active and reactive power through its terminals.
-
-Also started to analyse/compare, with software model, the expected network operation and operation with the soft open point.
-Implementation of control techniques and energy management schemes within DC microgrids.
-The software has been used by Western Power Distribution on its Smart Grid Demonstration Project - Solar Bristol, managing energy flows.
-It has started to enable modelling of UK bioenergy chains with integrated food production.
 not aware of any impacts yet
 We're currently in the process of further developing the software to test with users.
 The application is currently being distributed among local communities within Newcastle with a view to wider expansion in the future. We are still in the early stages of distribution and therefore no impact has been recorded.
-Rolls Royce are currently testing this software for internal use
 Community engagement + lots of outreach activities (documented elsewhere on ResearchFish)
 Public engagement plus outreach activities
-It's too early to report notable impact.
 This code is an update and re-write of the well-used Heidelberg MCTDH package, including many new features. It has lead to increased interest in the program and is part of an EU infra-structure project.
 Increase in efficiency and flexibility available to all users of the Dune software framework.
 Important new release of a widely used software library.
 Still working up to 1.0 release (a pre-release candidate is available at https://github.com/hande-qmc/hande) so no impacts yet, but stochastic quantum chemistry is a growing field and we hope the code will be widely used.
 New functionality added and the website improved.
 While it is too early to gather precise impact data we are pleased that the main paper describing the BEM++ library, which has appeared in Transactions on Mathematical Software in 2015, has been cited 40 times (Google Scholar citations) in its first year, which is a very high number for Mathematics. Also, we regularly observe now other groups at conferences presenting results based on BEM++. As time progresses the citation count of the main BEM++ paper will be some measure on how widely the software continues to be used.
-n/a yet.
-n/a yet.
 This software library has been used widely in our group for tensor network simulations, as well as being downloaded by users in other groups/institutions for use in their own calculations.
 This software library has been used widely in our group for tensor network simulations, as well as being downloaded by users in other groups/institutions for use in their own calculations.
 TNT Go was demonstrated at various summer schools as a way of generating interest in the TNT library project and providing an easy to use introduction to performing simulations using the TNT algorithms. This is the first web tool we are aware of that allows TNT simulations to be carried out without the need for any software to be installed by the user.
-ROTORSIM is also being used as one of the new benchmarks in the FP7 Mont Blanc European Exascale research project, making it one of the first applications to run at large scale on an ARM-based supercomputer.
-
-ROTORSIM is one of the few applications to run at extremely large scale on the Titan supercomputer at Oak Ridge national laboratory in the USA.
-
-ROTORSIM also helped form the basis of the first phase of the Intel Parallel Computing Center at the University of Bristol.
 The web portal went live late last year but the back-end simulation software continues to be developed as part of a linked project led by UCL. It is expected that impact will be realised when the calculations performed on the back-end become more advanced and so further value is created in uploading structures to the database. It should be noted that structures uploaded today can and will have additional properties calculated and uploaded as the back-end simulation code develops further.
 •	Used for research and teaching in 70+ institutions worldwide and downloaded 43,000 times
 •	Used in industrial projects/labs (TRW automotive, Fujitsu, AAB, Microsoft, NASA, Honeywell)
@@ -874,7 +617,6 @@ Development of biological tools. Biopsy is a tool that performs parameter set sy
 15 publications to date
 The community will be able to use this within SASSIE to compute scattering curves
 The methodology has allowed us to test and maximise the reliability of predictions made from molecular dynamics simulations, and is now a standard protocol applied and discussed in all our MD-realted publications.
-Using CoCo, we have shown it is possible to sample conformational space more than an order of magnitude faster than using conventional MD. This has led to a new collaboration with a Pharmaceutical company and a grant application is currently in preparation.
 n/a
 n/a
 n/a
@@ -885,14 +627,8 @@ The HAT Hyperdata Browser forms part of the technology behind the Hub-of-all-Thi
 The HAT Deployment Mechanism  forms part of the technology behind the Hub-of-all-Things (HAT) that allows individuals to flatten, contextualise, bundle and exchange all types of personal data.  All this tech exist within a trust framework of a personal data exchange ecosystem, hence allowing permitted exchange of personal data with other individuals or HAT-enabled organisations. These have been released to the wider public and made freely available, to reflect the nature of the project's public funding.
 This documentation is for the technology behind the Hub-of-all-Things (HAT) that allows individuals to flatten, contextualise, bundle and exchange all types of personal data.  All this tech exist within a trust framework of a personal data exchange ecosystem, hence allowing permitted exchange of personal data with other individuals or HAT-enabled organisations. These have been released to the wider public and made freely available, to reflect the nature of the project's public funding.
 The tool won as the most efficient theorem prover at the SL-COMP demonstration for reasoning about programs manipulating linked lists in memory.
-None to date.
 None as yet. A manuscript has been submitted to Annals of Applied Statistics that uses the package to implement and illustrate the methods developed on this grant.
 Early stage of exploitation, no impacts yet
-Early stage of exploitation, no impacts yet
-Early stage of exploitation, no impacts yet
-Early stage of exploitation, no impacts yet
-Early stage of exploitation, no impacts yet
-Potentially, the software can be embedded into Lineview's product portfolio and be customised for other products. At this stage, this can only be corroborated by them.
 Since the release of the first version of Longbow, there have been just over 400 verified unique downloads between the HECBioSim download repository and the Python PyPi index. The active user-base includes users from both academic (21 different institutions in the UK) and the industrial sector globally.
 
 Longbow has also been or is currently being incorporated into software pipelines of other groups/consortia, projects of notable progress include integrating with FLEX-EM a powerful tool developed by CCP-EM and FESetup developed by CCPBioSim. The Longbow project led to a collaboration with pharmaceutical company UCB into integration of Longbow into their workflow, this also led to a feasibility study into the construction of a similar tool for commercial cloud services such as Amazon EC2 or Microsoft Azure.
@@ -921,52 +657,22 @@ The HECBioSim portal has been heavily utilised by a very broad spectrum of users
 This open source code has only just been released - thus impact is not known at this stage.
 LB3D has been used to study self-assembly of cubic phases, micro-mixing, flow through porous media, fluid surface interactions and other problems in complex fluidics. In addition, we have implemented the moment propagation method in LB3D, which allows us to efficiently measure the effective diffusion, dispersion, and other transport properties of ionic species in electrokinetic flows. These developments have enabled us to reveal interesting phenomena in charged rocks, namely a non-monotonic dispersion coefficient and a crossover in the effective diffusion of charged tracers. The publication of these novel scientific insights is currently under preparation [Schiller and Coveney]. This research has benefitted considerably from the generous allocation of computing time on ARCHER through UKCOMES. Dr. Schiller will continue to develop and use LB3D at Clemson University, USA, thus broadening the international scientific impact of LB3D. Furthermore, the LB3D code is one of the application codes in the European H2020 Compat project http://www.compat-project.eu/, where it will be used to enable bleeding edge simulations for computational materials science research on emerging exascale HPC systems.
 FabSim has been used in a range of journal publications in bloodflow modelling, clay-polymer modelling, and modelling of protein-ligand binding affinities.
-DL_MESO is UKCOMES's flagship open-source software for worldwide distribution: a general purpose, highly scalable mesoscale simulation package for both Lattice Boltzmann Method (LBM) and Dissipative Particle Dynamics (DPD) methods [1]. It is written in C++ for LBM and Fortran90 for DPD. It is supplied with its own Java-based Graphical User Interface (GUI) and is capable of both serial and parallel execution using MPI and/or OpenMP. 
-
-DL_MESO was initially developed for the UK's collaborative computational project for simulation of condensed phases (CCP5) during 2003-06. It was subsequently made available to the global community through open access. In a rapidly developing field like mesoscale modelling, the relevance and importance of DL_MESO depend on its continued upgrading in modelling capabilities and computational efficiency on new computing architectures. UKCOMES activities contribute to DL_MESO in three main aspects: (1) incorporation of the latest physical models; (2) assessment and validation of physical models and numerical methods in DL_MESO; (3) adaptation to new software and hardware environments. Briefly, work by UKCOMES is to ensure the accuracy, robustness and reliability of DL_MESO so that it stays at the cutting edge of mesoscale simulation. 
-
-DL_MESO has a global user base. More than 1,100 academic licences for DL_MESO have been granted since its first release in 2004. The current version of DL_MESO (2.6) was released in November 2015 and has 59 users to date. The previous release (version 2.5) had 410 registered users from academia and industry: among them, about 20% were based in the UK, 24% mainland Europe, 19% China, 10% North America and 27% in the rest of the world. Dividing these users among their subject groups, 37% are identified as engineers, 21% physicists, 20% chemists, 12% material scientists and smaller numbers of computer scientists, earth scientists, bioscientists and mathematicians. Examples of applications include catalytic reactive flows [2], water diffusion in proton exchange membrane fuel cells [3] and proton dissociation and transfer using DPD [4].
-
-DL_MESO is being used extensively in a TSB-funded industrial consortium (Unilever, Syngenta, Infineum and STFC's Hartree Centre) for Computer Aided Formulation of new products, using DPD as a heuristic tool for mesoscopic phase prediction to select potential product formulations for laboratory experimentation. 
-
-Current work includes incorporation of various new physical models such as cascaded LBM for multiphase flow [5], a new approach to contact angle hysteresis [6] and kinetic and slip boundary conditions. Co-development with the consortium's other two open-source codes - LB3D and HemeLB - is being considered. Finally, incorporation of GPU and other computing techniques is being explored for new computing architectures, such as Intel Xeon Phi many-core accelerators [7].
-1. M. A. Seaton, R. L. Anderson, S. Metz and W. Smith, "DL_MESO: highly scalable mesoscale simulations," Molecular Simulation 39 (10), 796-821 (2013). DOI:10.1080/08927022.2013.772297
-2. C. D. Stiles and Y. Xue, "Lattice Boltzmann Simulation of Transport Phenomena in Nanostructured Cathode Catalyst Layer for Proton Exchange Membrane Fuel Cells," MRS Proceedings, 1384, 25-30 (2012). DOI:10.1557/opl.2012.322
-3. E. O. Johansson, T. Yamada, B. Sundén and J. Yuan, "Dissipative particle dynamics approach for non-scale membrane structure reconstruction and water diffusion coefficient estimation," International Journal of Hydrogen Energy 40 (4), 1800-1808 (2015). DOI:10.1016/j.ijhydene.2014.11.030
-4. M.-T. Lee, A. Vishnyakov and A. V. Neimark, "Modeling proton dissociation and transfer using dissipative particle dynamics simulation," Journal of Chemical Theory and Computation 11 (9), 4395-4403 (2015). DOI:10.1021/acs.jctc.5b00467
-5. D. Lycett-Brown, K. H. Luo, R. H. Liu and P. M. Lv, "Binary droplet collision simulations by a multiphase cascaded lattice Boltzmann method," Physics of Fluids 26 (2), 023303: 1-26 (2014). DOI: 10.1063/1.4866146*
-6. J. R. Castrejón-Pita, K. J. Kubiak, A. A. Castrejón-Pita, M. C. T. Wilson and I. M. Hutchings, "Mixing and internal dynamics of droplets impacting and coalescing on a solid surface," Physical Review E 88 (2), 023023: 1-11 (2013). DOI:10.1103/PhysRevE.88.023023
-7. M. Seaton, L. Mason, Z. A. Matveev and S. Blair-Chappell, "Vectorization advice", chapter 23 (pp. 441-462) in J. Reinders and J. Jeffers (ed.), "High Performance Parallelism Pearls: Multicore and Many-core Programming Approaches. Volume Two", Elsevier: Amsterdam (2015). 
-Firedrake is a principle test platform for the development of Gung Ho, the future UK Met Office dynamical core.
-Faster layout generation which leads to accelerated turn out of devices.
-ALEA is actively used by a number of groups in the UK and the US (e.g. Edinburgh, Lancaster, Virginia Tech, Old Dominion University) to perform targeted, energy-aware code optimisation on high-end computing systems.
 Used as part of the ongoing SICSA Multicore Challenge.
-This simulation tool could help both researchers and industry to validate different protection control approaches in power system.
-A very useful tool to measure the influences of key factors on emission price.
-The primary use of this controller will be in implementing time-slot allocations to high power demand loads on power-limited mini-grids, such as those supplied from hydro-electric generators.  This technique reduces the chance of overloading the system at peak demand periods by activating power supply circuits to high-power load at  pre-allocated time-slots during off-peak periods.  This allows more customers to be served at lower cost to them, while increasing reliability of the mini-grid and improving the operator's Return on Investment (ROI) by keeping the system running closer to full capacity.  It can also be applied to energy-limited mini-grids, such as those supplied from wind or solar generators.  In this situation, the time-slots are sold at preferential rates during periods of high solar (or wind) input.  This reduces reliance on batteries, allowing smaller (and cheaper) battery banks, which are put under much less stress so that they last longer.  Thus blackouts and battery damage are reduced as are lifetime costs and therefore customer tariffs.
 Associated paper accepted at the IEEE International Conference on Software Testing, Verification, and Validation (ICST 2016)
 LIQUID Dataplex is a fundamental tool for the LIQUID project. In particular, we have run experiments (which we will continue to run after the end of the grant duration, as a continuation of the research) on processing keyword searches on the Deep Web, and on the use of integrity constraints for reducing the query processing time.
-The adoption of RFT should reduce market inefficiency, lower end-prices and increase producers' income. We are currently setting up a trial study in Talcahuano, Chile, in collaboration with the Universidad del Desarrollo (Santiago and Concepcion, Chile). At the moment the trial study is still being set up, therefore we are currently unable to report on any proper impact.
 New functionality for the Docker (container virtualisation) software stack
 It is hoped that this will lead to new users and a higher profile of the research. Early impressions from others has been positive and partners in Utrecht have also hosted software on the same platform.
 
 This website hosts multiple software projects, new projects are added at the same time as methods are published in order to facilitate uptake by the research community.
-Currently for internal research use and constitutes a research instrument within the Design Science methodology. Further it is integral to the simulations/games to be conducted.
-Internal impacts. The Vault DX artefact acts as a research instrument and simulation environment within the Design Science Research approach for the next stage of research.
 Impacts are: (i) contribution to the development of a specification for a Scheme Authority concerning the trading of personal data under the Digital Catapult Trust Framework Initiative.
 
 The application is being advertised at the moment.
-The code is in use at UCL by a graduate student (Andrew Hallam) studying quenches of 2D cold atom systems. Some of these results have already formed part of his first year DTC project. Current work is being prepared for publication and will form part of his thesis.
-The code is also in use at BNL as part of a collaboration to study 2D quantum magnets.
 -
 -
-No impact yet.
 Still early days.
 TBC later.
 It is too early to assess impact; this will become possible in 2-3 years' time.
 It is too early to assess impact; this will become possible in 2-3 years' time.
-None yet.
-The developed optimisation software can be efficiently used by engineers and practitioners to design more efficient and resilient cold-formed steel (CFS) structural systems.
 Since this software enables one to create a listening test GUI flexibly and quickly, it is expected to have a high impact in academic and research society. Researchers and students who work in subjective audio evaluation can greatly benefit from the software. Since this software became available in June 2015, the download count on the website is increasing rapidly every month. It is expected that the impact will continuously grow.
 HAART was made available for free download in Aug 2015. HAART significantly improves the conventional workflow of impulse response capturing and acoustic analysis, and therefore it is expected to hugely benefit academics, students and researchers in the field of room/hall acoustics, psychoacoustics and spatial audio.
 Since September 2015 the software has been downloaded 28 times.
@@ -976,7 +682,6 @@ Too early to say, as the software has just been published.
 As described in the following video lecture, presented in Lille (France), July 2015:
 http://videolectures.net/icml2015_filippone_unbiased_linear_system/
 Too early to say, as the code has just been published.
-This is a prototype software system, which needs further development for more advanced functionality and testing before its full implementation in clinical trials.
 This was put on Github very recently so no impact is known yet.
 We are engaged in a number of conversation with industrial partners (e.g., McAfee Labs, Qualcomm, and Google) and academia (e.g., University of Luxembourg, National University Singapore, TU Munich) to further monetize on the capability analysis of CopperDroid.
 As this product has only be released recently, there is no impact yet. However, using this software we have been able to detect what we think is the first example of collusion in the wild.
@@ -990,21 +695,13 @@ The app has already been used independently by artists to create public experien
 It underpins the Artcodes and Storicodes mobile apps.
 The open source release of the library enables other developers to create bespoke apps that make use of Artcodes.
 The library is currently being used by undergraduate and PhD projects.
-normal citizens and patients with long term conditions will use the platform for self-management of their diseases.
 Used extensively by the collaborators of the Verifiable Autonomy project to design and develop both low level (continuous) vehicle control and high level (discrete, agent based) decision making. Allows for rapid prototyping of systems in a high fidelity environment.
 Also used by a number of other institutions outside of the collaboration, repository has been forked 4 times by other projects.
 None to this date; it does however act as stepping stone for further research in my research group. The software tutorial is publicly available.
 open science community
 The Menpo project has been used to develop the annotations of the very popular 300VW and 300W (second version) benchmarks. 300VW is the first benchmark for facial landmark tracking methodologies and 300W is the most popular database  for facial landmark localisation in arbitrary conditions (used by the majority of the state-of-the-art published in top computer vision venues, such as ICCV, CVPR, ECCV etc.). The menpo project has been demoed in ICCV 2015. Currently the menpo project has hundredths of users both in academia and industry.
 None yet; work in progress
-This has been one of the first tools of this kind - we have received positive feedback our industrial partners, who are very likely to seek adoption upon the completion of this project.
-
-This DfMA Decision Making Tool evaluates the impact of consequential decisions from the manufacturing up to assembly in a multi-objective DfMA project. In DfMA projects, the main objectives are to minimize makespan and cost while maximizing safety, which is included in this tool. Safety is maximized by minimizing the number of on-site workers on congested construction sites. Using the multi-objective GA-based optimization model implemented in this tool, optimal solutions for different levels of prefabrication can be determined and compared with respect to overall time and cost.
-Applications in safety cases for reactors
-The completed numerical model for the simulation of the forming of sheet metals with multi-punches tools, including the tools with cushions, enables prediction of the forming limits and sprinbacks of sheet-metals, which would help to improve the design and manufacturing efficiency.
-Can theoretically replace current turbine models used in commercial engine design software, which currently require map data files to predict performance.
 The website has enabled industry and academics to engage with the outputs of the project.
-The software tool with the CAE Building Blocks methodology have already been used on a number of projects and tasks, including drafting of guidance for the IAEA on the assessment of dependability of nuclear I&amp;C systems important for safety, drafting of templates for arguing about statistical testing as part of the EU Harmonics project, developing cases to address probabilistic modelling of critical infrastructure and particular how one addresses model doubt. We have also used the CAE Blocks plugin on a professional Masters level course at City University London on Information Security and Risk in an Assurance Case module.
 2 journal papers currently being finished about this content
 1 journal paper about to be submitted, already 2 other research groups using this software.
 The FFEA software is still kept in a private repository. However, we have been collaborating with Toni Collis at the EPCC in different computational approaches, from visualisation of trajectories to performance characterisation and a distributed parallel implementation. 
@@ -1020,9 +717,6 @@ MU-CSeq outperforms other concurrency verification tools and has won the 1 gold 
 Lazy-CSeq outperforms other concurrency verification tools and has won the 2 gold and 1 silver medals in the concurrency category of the last 3 editions of the international software verification competition SV-COMP.
 The tool has generated interest in the Palladio software engineering community. It is now listed among the official solvers of PCM: https://sdqweb.ipd.kit.edu/wiki/Palladio_Solvers_and_Simulation
 We have demonstrated and transferred the tool to our industrial partners (BOC Systems).
-Not available yet.
-Still under development.
-The ability to model the capsule implosion experiments driven by laser or X-ray radiation ablation. The accurate treatment of the pressure and specific heat capacity of materials in the solid phase are essential in order to accurately reproduce the behavior of shock compression of materials during the early phases of compression. This process is important for maintaining a low temperature adiabat during spherical compression in inertial confinement fusion.
 A user base has been started, which is expected to grow as the code develops
 We will adapt the OpenProof educational system for heterogeneous logic to allow the use of Readith when teaching logic. OpenProof has a worldwide user base, and this will enable us to reach those users, enhancing the educational environment of students and teachers.
 The SO3 code is generally applicable whenever Fourier transforms must be computed on SO(3) and will be integral component of new fast wavelet transforms on the sphere.
@@ -1031,10 +725,6 @@ The tool has been made available for research, and has been licensed to over 40 
 This has led to about 10 different collaborations with research groups across the world.
 
 When applied to the problem of locating landmarks used by orthodontists on cephelograms (radiographs of the skull), it won an international competition for accuracy.  This has led to discussions with various companies about licensing the technology for inclusion in dental software suites.
-The work has resulted in consistent predictions of near field jet dynamics and turbulence statistics from all three different codes. This indicates the fact that the physical model we use in this project is independent of the choice of a numerical solver.
-
-A summary of the work has recently been submitted to the 11th International ERCOFTAC Symposium on Engineering Turbulence Modelling and Measurements (awaiting acceptance).
-This software is used for modelling of care pathways by our researchers. We have already modelled part of COPD and Osteoarthritis. We will use the software to evaluate out methods.
 Demonstration at SemDial 2015 conference.
 This software is now being used in  several projects in our lab. It lead to our NIPS 2015 paper and it  was demonstrated at the IWSDS 2016 conference.
 The first auto-tuning tool for HSA programs.
@@ -1070,25 +760,11 @@ The impact of GAP could be tracked, for example, by its citations, which could b
 --&gt;PhD students in Sheffield, Manchester, Southampton and Imperial College with research project based on Incompact3d
 none
 The Audio3D system will be used to simulate listening environments for hearing-impaired listeners and demonstrate the effects of novel spatial signal processing algorithms on the intelligibility of speech in noise.
-This software is key to our ongoing research.
-none as yet. Presently in development and research on-going
-This software can optimize a structure by taking the effects of manufacturing tolerances into consideration whilst making the optimisation process automatic (no user intervention).
-This mesh geometry control is fundamental for the study of complex systems, and may be applied in different contexts than the exhaust system used to define it. This technique can also be used on a range of different &quot;systems&quot;, for example it can also be used for automatically defining human anthropometry on complex human computer models, in a different branch of research a Coventry University.
-This software can in a few minutes gauge the manufacturing process of any bend tube structure, even in the case of multiple bends.  It is a very useful tool for industrial applications.  Also it is marketable as tables of possible bends and pipe thickness can be computed as a feasibility table as function of the bending process.
 Initially employed in support of the CEGAD/SWELL project - see http://www.energylocal.co.uk/
-The Supercomputer App has been showcased at a number of conferences (e.g., SC15) and events (e.g., ARCHER Launch, outreach events, the Big Bang Fair). It allows people of all ages to get a better understanding of the trade-offs involved in PC design.
 This resource showcases the diversity of the HPC community, and the variety of careers available to those working with HPC. The aim is to further increase the participation in HPC, irrespective of gender, ethnicity, age, family or any other personal characteristic.
-A paper on this work is currently under review and the code will be published as supplementary information at the same time.
 The main impact is making the developed methodology available to practitioners for data analyses routinely conducted in many scientific fields and industry, e.g. robust clustering analyses or density estimation.
 The main impact is ensuring that the developed methodology is accessible to researchers in biomedicine and bioinformatics.
-This is a software developed as a part of the InnovateUK grant and the software has been given to industrial partner. The software has not been made available widely at this moment.
 Coastal Engineers are evaluating it for further funding
 Catalyst Manufacturers are funding application of it
 EPSRC has supported a follow-on Pathway to Impact project
-Not known
 Reductions in carbon use, particularly in government buildings
-- Trialled extensively in Carillion Plc offices (Redcar)
-- Led to additional funding through an Acceleration Award to exploit the Faith Window as a commercial product
-Published a number of research papers that describe learnings related to the manifestation of trust in the highways maintenance sector. This system was used as a tool to further explore trust in the highways domain.
-- Marketing and sales of InTouch's SmartWater solution.
-Significant commercialisation.

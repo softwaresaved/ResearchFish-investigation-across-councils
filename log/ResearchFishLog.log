@@ -148,3 +148,155 @@
 2016-12-13 12:54:00,526 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
 2016-12-13 12:54:00,527 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
 2016-12-13 12:54:00,527 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 12:57:46,964 - __main__ - INFO - Starting...
+2016-12-13 12:57:47,271 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 12:57:47,358 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 12:57:47,358 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 12:57:47,358 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 12:57:47,358 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 12:57:47,358 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 13:03:18,474 - __main__ - INFO - Starting...
+2016-12-13 13:03:18,802 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 13:03:18,900 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 13:03:18,900 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 13:03:18,900 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 13:03:18,900 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 13:03:18,901 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 13:46:32,597 - __main__ - INFO - Starting...
+2016-12-13 13:46:32,917 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 13:46:33,009 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 13:46:33,009 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 13:46:33,010 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 13:46:33,010 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 13:46:33,010 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:15:52,821 - __main__ - INFO - Starting...
+2016-12-13 15:15:53,140 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:15:53,276 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:15:53,276 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:15:53,276 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:15:53,276 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:15:53,276 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:16:35,839 - __main__ - INFO - Starting...
+2016-12-13 15:16:36,138 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:16:36,229 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:16:36,229 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:16:36,229 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:16:36,229 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:16:36,229 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:18:18,845 - __main__ - INFO - Starting...
+2016-12-13 15:18:19,168 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:18:19,266 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:18:19,267 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:18:19,267 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:18:19,267 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:18:19,267 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:18:50,439 - __main__ - INFO - Starting...
+2016-12-13 15:18:50,750 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:18:50,841 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:18:50,841 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:18:50,841 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:18:50,841 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:18:50,841 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:19:59,140 - __main__ - INFO - Starting...
+2016-12-13 15:19:59,442 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:19:59,532 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:19:59,532 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:19:59,532 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:19:59,532 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:19:59,532 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:20:17,827 - __main__ - INFO - Starting...
+2016-12-13 15:20:18,129 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:20:18,217 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:20:18,218 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:20:18,218 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:20:18,218 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:20:18,218 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:21:00,956 - __main__ - INFO - Starting...
+2016-12-13 15:21:01,261 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:21:01,364 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:21:01,364 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:21:01,364 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:21:01,365 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:21:01,365 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:24:56,140 - __main__ - INFO - Starting...
+2016-12-13 15:24:56,450 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:24:56,565 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:24:56,565 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:24:56,565 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:24:56,565 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:24:56,566 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:25:10,879 - __main__ - INFO - Starting...
+2016-12-13 15:25:11,186 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:25:11,290 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:25:11,290 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:25:11,290 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:25:11,291 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:25:11,291 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:26:21,068 - __main__ - INFO - Starting...
+2016-12-13 15:26:21,386 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:26:21,500 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:26:21,500 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:26:21,500 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:26:21,500 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:26:21,500 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:30:19,055 - __main__ - INFO - Starting...
+2016-12-13 15:30:19,351 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:30:19,501 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:30:19,502 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:30:19,502 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:30:19,502 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:30:19,502 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:30:42,507 - __main__ - INFO - Starting...
+2016-12-13 15:30:42,812 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:30:42,963 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:30:42,963 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:30:42,964 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:30:42,964 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:30:42,964 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:50:26,903 - __main__ - INFO - Starting...
+2016-12-13 15:50:27,226 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:50:27,318 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:50:27,318 - __main__ - INFO - Records dropped during duplicate cleaning: 182
+2016-12-13 15:50:27,318 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 235
+2016-12-13 15:50:27,318 - __main__ - INFO - Records dropped during non-valid-year cleaning: 21
+2016-12-13 15:50:27,318 - __main__ - INFO - Records left in cleaned data set: 856
+2016-12-13 15:54:00,781 - __main__ - INFO - Starting...
+2016-12-13 15:54:01,082 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:54:01,168 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:54:01,169 - __main__ - INFO - Records dropped during duplicate cleaning: 190
+2016-12-13 15:54:01,169 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 233
+2016-12-13 15:54:01,169 - __main__ - INFO - Records dropped during non-valid-year cleaning: 20
+2016-12-13 15:54:01,169 - __main__ - INFO - Records left in cleaned data set: 851
+2016-12-13 15:55:51,353 - __main__ - INFO - Starting...
+2016-12-13 15:55:51,657 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 15:55:51,741 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 15:55:51,741 - __main__ - INFO - Records dropped during duplicate cleaning: 190
+2016-12-13 15:55:51,741 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 233
+2016-12-13 15:55:51,741 - __main__ - INFO - Records dropped during non-valid-year cleaning: 20
+2016-12-13 15:55:51,741 - __main__ - INFO - Records left in cleaned data set: 851
+2016-12-13 16:01:48,596 - __main__ - INFO - Starting...
+2016-12-13 16:01:48,920 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:02:36,963 - __main__ - INFO - Starting...
+2016-12-13 16:02:37,272 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:06:04,764 - __main__ - INFO - Starting...
+2016-12-13 16:06:05,071 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:06:43,670 - __main__ - INFO - Starting...
+2016-12-13 16:06:43,968 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:08:25,642 - __main__ - INFO - Starting...
+2016-12-13 16:08:25,947 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:09:43,194 - __main__ - INFO - Starting...
+2016-12-13 16:09:43,508 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:11:34,073 - __main__ - INFO - Starting...
+2016-12-13 16:11:34,384 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:11:34,472 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 16:11:34,472 - __main__ - INFO - Records dropped during duplicate cleaning: 190
+2016-12-13 16:11:34,472 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 233
+2016-12-13 16:11:34,473 - __main__ - INFO - Records dropped during non-valid-year cleaning: 20
+2016-12-13 16:11:34,473 - __main__ - INFO - Records left in cleaned data set: 851
+2016-12-13 16:13:31,736 - __main__ - INFO - Starting...
+2016-12-13 16:13:32,039 - __main__ - INFO - Raw dataframe length before any processing: 1682
+2016-12-13 16:13:32,124 - __main__ - INFO - Records dropped during tech product cleaning: 388
+2016-12-13 16:13:32,124 - __main__ - INFO - Records dropped during duplicate cleaning: 190
+2016-12-13 16:13:32,124 - __main__ - INFO - Records dropped when cleaning years outside 2012-2016: 233
+2016-12-13 16:13:32,124 - __main__ - INFO - Records dropped during non-valid-year cleaning: 20
+2016-12-13 16:13:32,124 - __main__ - INFO - Records left in cleaned data set: 851

@@ -15,19 +15,20 @@ import logging
 
 
 DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
+DATASHEETNAME = "Software_TechnicalProducts"
 CHART_STORE_DIR = "./charts/"
 EXCEL_RESULT_STORE = "./data/researchfish_results.xlsx"
 IMPACT_RESULT_STORE = "./data/impact.txt"
 LOGGERLOCATION = "./log/ResearchFishLog.log"
 
 
-def import_xls_to_df(filename):
+def import_xls_to_df(filename, name_of_sheet):
     """
     Imports an Excel file into a Pandas dataframe
-    :params: get an xls file
+    :params: get an xls file and a sheetname from that file
     :return: a df
     """
-    return pd.read_excel(filename,sheetname='Software_TechnicalProducts')
+    return pd.read_excel(filename,sheetname=name_of_sheet)
 
 
 def add_column(dataframe,newcol):
@@ -44,18 +45,19 @@ def clean_data(dataframe,colname):
     """
     Cleans the dataframe based on advice we have been given by EPSRC:
     1. Remove the tech products that don't actually relate to software
-    2. Remove duplicate records (where a duplicate is defined as a record with the same 'Impact' and 'Tech product' as another record)
-    1. Cleans the year in which submission was made and removes years that are not straighforward, namely "Pre-<year>" because it's ambiguous:
-    could be any year at all before <year>
-    2. Remove earlier years of data. Only 2012-2016 are reliable enough to include in the study
-    3. Removes 'Type of tech product' that shouldn't have been included in the original data we were given. Only 'Software', 'Grid Application',
+    2. Remove duplicate records (where a duplicate is defined as a record with the same 'Tech product' as another record)
+    3. Removes years before 2012. Only 2012-2016 are reliable enough to include in the study
+    4. Removes years that include text (i.e. "Pre-2016") because it's ambiguous
+    5. Drops any years that include NaN in the year category
+
+    5. Removes 'Type of tech product' that shouldn't have been included in the original data we were given. Only 'Software', 'Grid Application',
     'e-Business Platform' and 'Webtool/Application' should have been included.
     :params: a dataframe and a colname of the column in which the years are stored
     :return: a dataframe with only int years and NaNs
     """
-    
+#   Set up logging
     logger = logging.getLogger(__name__)
-    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    
 #   Want some metrics on how many records are being dropped. Set up a variable to store length of dataframe before each cleaning operation
     length_start = len(dataframe)
 
@@ -65,7 +67,7 @@ def clean_data(dataframe,colname):
     length_tech_product = len(dataframe)
     
 #   Remove duplicate entries where duplication occurs in the 'Impact' AND the 'Tech Product' fields
-    dataframe.drop_duplicates(subset = ['Impact', 'Tech Product'], keep = 'first', inplace = True)
+    dataframe.drop_duplicates(subset = ['Tech Product'], keep = 'first', inplace = True)
 
     length_dupes = len(dataframe)
     
@@ -250,9 +252,10 @@ def main():
     
 #   I write back to the original dataframe and pandas warns about that, so turning off the warning    
     pd.options.mode.chained_assignment = None 
+
     
 #   Import dataframe from original xls
-    df = import_xls_to_df(DATAFILENAME)
+    df = import_xls_to_df(DATAFILENAME, DATASHEETNAME)
 
     logger.info('Raw dataframe length before any processing: ' + repr(len(df)))
 
@@ -266,9 +269,8 @@ def main():
     rootdomainsdf = get_root_domains(df,'URL')
 
 #   Adds data into df about status of the URL at which software is stored
-#    url_check = check_url_status(df,'URL','URL status')
-#    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
-#    print(url_df)
+    url_check = check_url_status(df,'URL','URL status')
+    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
     
 #   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
@@ -282,15 +284,13 @@ def main():
 
 #   Collate all impact statements into a text file for later word cloud generation
     impact_to_txt(df,'Impact')
-    
-    print(df.columns)
 
 
 #   Plot results and save charts
-#    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
-#    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
-#    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
-#    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
+    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
+    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
+    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
+    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
 
 
 #   Write results to Excel spreadsheet for the shear hell of it
@@ -299,8 +299,8 @@ def main():
     universities.to_excel(writer,'universities')
     unique_rootdomains.to_excel(writer,'rootdomain')
     year_of_return.to_excel(writer,'returnyear')
-#    url_df.to_excel(writer,'urlstatus')
-#    url_status.to_excel(writer,'urlstatus_summ')
+    url_df.to_excel(writer,'urlstatus')
+    url_status.to_excel(writer,'urlstatus_summ')
     writer.save()
 
 
