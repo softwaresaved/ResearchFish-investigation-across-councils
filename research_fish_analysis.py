@@ -40,7 +40,9 @@ def add_column(dataframe,newcol):
 
 def clean_data(dataframe,colname):
     """
-    Cleans the dataframe based on advice we have been given
+    Cleans the dataframe based on advice we have been given by EPSRC:
+    1. Remove the tech products that don't actually relate to software
+    2. Remove duplicate records (where a duplicate is defined as a record with the same 'Impact' and 'Tech product' as another record)
     1. Cleans the year in which submission was made and removes years that are not straighforward, namely "Pre-<year>" because it's ambiguous:
     could be any year at all before <year>
     2. Remove earlier years of data. Only 2012-2016 are reliable enough to include in the study
@@ -49,16 +51,43 @@ def clean_data(dataframe,colname):
     :params: a dataframe and a colname of the column in which the years are stored
     :return: a dataframe with only int years and NaNs
     """
-#   Go through the rows, if you can't convert the year into an int (i.e. the entry includes text), write a NaN back into the dataframe   
+#   Want some metrics on how many records are being dropped. Set up a variable to store length of dataframe before each cleaning operation
+    length_n_minus_1 = len(dataframe)
+
+#   Drop all outputs that aren't related to the four products that are classed as software
+    dataframe = dataframe[(dataframe['Type of Tech Product'] == 'Software') | (dataframe['Type of Tech Product'] == 'Grid Application') | (dataframe['Type of Tech Product'] == 'e-Business Platform') | (dataframe['Type of Tech Product'] == 'Webtool/Application')]
+
+    print("Records dropped during tech product cleaning: " + repr(length_n_minus_1  - len(dataframe)))
+    length_n_minus_1 = len(dataframe)
+    
+#   Remove duplicate entries where duplication occurs in the 'Impact' AND the 'Tech Product' fields
+    dataframe.drop_duplicates(subset = ['Impact', 'Tech Product'], keep = 'first', inplace = True)
+
+    print("Records dropped during duplicate cleaning: " + repr(length_n_minus_1  - len(dataframe)))
+    length_n_minus_1 = len(dataframe)
+    
+#   Remove data from years where EPSRC are less certain that the data is accurate
+    lost_years = ['2006', '2007', '2008', '2009', '2010', '2011']
+
+    for year in lost_years:
+        dataframe.drop(dataframe[dataframe[colname] == year].index, inplace = True)
+
+    print("Records dropped when cleaning years outside 2012-2016: " + repr(length_n_minus_1  - len(dataframe)))
+    length_n_minus_1 = len(dataframe)
+    
+#   Go through the rows, if you can't convert the year into an int (i.e. the entry includes the text "Pre-"), write a NaN back into the dataframe 
     for i, row in dataframe.iterrows():
         try:
             int(dataframe[colname][i])
         except:
             dataframe[colname][i] = np.nan
+        
+#   Drop any data which lacks a info on Year First Provided because we're unsure of its provenance
+    dataframe.dropna(subset=[colname], inplace=True)
+
+    print("Records dropped during non-valid-year cleaning: " + repr(length_n_minus_1  - len(dataframe)))
     
-    dataframe = dataframe[(dataframe['Year First Provided'] != 2012) & (dataframe['Year First Provided'] != 2016)]
-    
-    dataframe = dataframe[(dataframe['Type of Tech Product'] != 'Software') & (dataframe['Type of Tech Product'] != 'Grid Application') & (dataframe['Type of Tech Product'] != 'e-Business Platform')& (dataframe['Type of Tech Product'] != 'Webtool/Application')]
+    print("Records left in cleaned data set: " + repr(len(dataframe)))
     
     return dataframe
     
@@ -178,6 +207,9 @@ def main():
     """
     Main function to run program
     """
+#   I write back to the original dataframe and pandas warns about that, so turning off the warning    
+    pd.options.mode.chained_assignment = None 
+    
 #   Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME)
 
@@ -186,10 +218,6 @@ def main():
 
 #   Clean the dataframe
     df = clean_data(df,'Year First Provided')
-
-    print(len(df))
-    
-    print(df['Year First Provided'])
 
 #   Get a list of rootdomains (i.e. netloc) of URLs
     rootdomainsdf = get_root_domains(df,'URL')
@@ -212,7 +240,7 @@ def main():
 #   Collate all impact statements into a text file for later word cloud generation
     impact_to_txt(df,'Impact')
     
-    print(len(unique_rootdomains))
+    print(len(df))
 
 
 #   Plot results and save charts
