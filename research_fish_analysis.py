@@ -98,24 +98,44 @@ def clean_data(dataframe,colname):
     return dataframe
     
 
-def produce_count(df, colname):
+def produce_count(dataframe, colname):
     """
     When given a column, returns a count of its unique values
     This DOES NOT count blank entries - unlike produce_count_and_na()
     :params: a data frame and a column name in the dataframe
     :return: a table of unique names and their count
     """
-    return pd.DataFrame(df[colname].value_counts())
+    
+    dataframe = pd.DataFrame(dataframe[colname].value_counts())
+    
+#   Add a column for percentages
+    dataframe['percentage'] = dataframe[colname]/dataframe[colname].sum()
+    
+    return dataframe
 
     
-def produce_count_and_na(df, colname):
+def produce_count_and_na(dataframe, colname):
     """
     When given a column, returns a count of its unique values
     This ALSO DOES count blank entries - unlike produce_count()
+    Special measures need to be employed for the 'Open source' column, because that question is only asked for 'Tech product' of the 
+    'Software variety' hence the if statement
     :params: a data frame and a column name in the dataframe
     :return: a table of unique names and their count
     """
-    return pd.DataFrame(df[colname].value_counts(dropna = False))
+
+#   Employ special measures as discussed above for 'Open Source?' field
+    if colname == 'Open Source?':
+        temp_dataframe = dataframe[dataframe['Type of Tech Product'] == 'Software']
+        dataframe = pd.DataFrame(temp_dataframe[colname].value_counts(dropna = False))
+#        pd.DataFrame(dataframe[(dataframe['Tech Product'] == 'Software') & (dataframe[colname])].value_counts(dropna = False))
+    else:
+        dataframe = pd.DataFrame(dataframe[colname].value_counts(dropna = False))
+
+#   Add a column for percentages
+    dataframe['percentage'] = dataframe[colname]/dataframe[colname].sum()
+
+    return dataframe
 
 
 def get_root_domains(dataframe,colname):
@@ -234,6 +254,8 @@ def main():
 #   Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME)
 
+    logger.info('Raw dataframe length before any processing: ' + repr(len(df)))
+
 #   Add a column for URL pinging response
     add_column(df,'URL status')
 
@@ -261,7 +283,7 @@ def main():
 #   Collate all impact statements into a text file for later word cloud generation
     impact_to_txt(df,'Impact')
     
-    print(len(df))
+    print(df.columns)
 
 
 #   Plot results and save charts
