@@ -11,12 +11,14 @@ from collections import Counter
 import math
 import requests
 import httplib2
+import logging
 
 
 DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
 CHART_STORE_DIR = "./charts/"
 EXCEL_RESULT_STORE = "./data/researchfish_results.xlsx"
 IMPACT_RESULT_STORE = "./data/impact.txt"
+LOGGERLOCATION = "./log/ResearchFishLog.log"
 
 
 def import_xls_to_df(filename):
@@ -51,29 +53,28 @@ def clean_data(dataframe,colname):
     :params: a dataframe and a colname of the column in which the years are stored
     :return: a dataframe with only int years and NaNs
     """
+    
+    logger = logging.getLogger(__name__)
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 #   Want some metrics on how many records are being dropped. Set up a variable to store length of dataframe before each cleaning operation
-    length_n_minus_1 = len(dataframe)
+    length_start = len(dataframe)
 
 #   Drop all outputs that aren't related to the four products that are classed as software
     dataframe = dataframe[(dataframe['Type of Tech Product'] == 'Software') | (dataframe['Type of Tech Product'] == 'Grid Application') | (dataframe['Type of Tech Product'] == 'e-Business Platform') | (dataframe['Type of Tech Product'] == 'Webtool/Application')]
 
-    print("Records dropped during tech product cleaning: " + repr(length_n_minus_1  - len(dataframe)))
-    length_n_minus_1 = len(dataframe)
+    length_tech_product = len(dataframe)
     
 #   Remove duplicate entries where duplication occurs in the 'Impact' AND the 'Tech Product' fields
     dataframe.drop_duplicates(subset = ['Impact', 'Tech Product'], keep = 'first', inplace = True)
 
-    print("Records dropped during duplicate cleaning: " + repr(length_n_minus_1  - len(dataframe)))
-    length_n_minus_1 = len(dataframe)
+    length_dupes = len(dataframe)
     
 #   Remove data from years where EPSRC are less certain that the data is accurate
     lost_years = ['2006', '2007', '2008', '2009', '2010', '2011']
-
     for year in lost_years:
         dataframe.drop(dataframe[dataframe[colname] == year].index, inplace = True)
 
-    print("Records dropped when cleaning years outside 2012-2016: " + repr(length_n_minus_1  - len(dataframe)))
-    length_n_minus_1 = len(dataframe)
+    length_years = len(dataframe)
     
 #   Go through the rows, if you can't convert the year into an int (i.e. the entry includes the text "Pre-"), write a NaN back into the dataframe 
     for i, row in dataframe.iterrows():
@@ -81,13 +82,18 @@ def clean_data(dataframe,colname):
             int(dataframe[colname][i])
         except:
             dataframe[colname][i] = np.nan
-        
+    
 #   Drop any data which lacks a info on Year First Provided because we're unsure of its provenance
     dataframe.dropna(subset=[colname], inplace=True)
-
-    print("Records dropped during non-valid-year cleaning: " + repr(length_n_minus_1  - len(dataframe)))
     
-    print("Records left in cleaned data set: " + repr(len(dataframe)))
+    length_final = len(dataframe)
+
+#   Print details on the changes to the dataframe length during cleaning
+    logger.info("Records dropped during tech product cleaning: " + repr(length_start - length_tech_product))
+    logger.info("Records dropped during duplicate cleaning: " + repr(length_tech_product - length_dupes))
+    logger.info("Records dropped when cleaning years outside 2012-2016: " + repr(length_dupes - length_years))       
+    logger.info("Records dropped during non-valid-year cleaning: " + repr(length_years - length_final))
+    logger.info("Records left in cleaned data set: " + repr(length_final))
     
     return dataframe
     
@@ -207,6 +213,21 @@ def main():
     """
     Main function to run program
     """
+    
+#   Set up logging
+    logging.basicConfig(level=logging.DEBUG)
+    logger = logging.getLogger(__name__)
+    handler = logging.FileHandler(LOGGERLOCATION)
+    handler.setLevel(logging.INFO)
+    # create a logging format
+    formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    handler.setFormatter(formatter)
+    # add the handlers to the logger
+    logger.addHandler(handler)
+
+    logger.info('Starting...')
+#    logger.debug('Does this go to the screen?') 
+    
 #   I write back to the original dataframe and pandas warns about that, so turning off the warning    
     pd.options.mode.chained_assignment = None 
     
