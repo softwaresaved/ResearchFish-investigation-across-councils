@@ -269,8 +269,8 @@ def main():
     rootdomainsdf = get_root_domains(df,'URL')
 
 #   Adds data into df about status of the URL at which software is stored
-    url_check = check_url_status(df,'URL','URL status')
-    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
+#    url_check = check_url_status(df,'URL','URL status')
+#    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
     
 #   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
@@ -287,21 +287,21 @@ def main():
 
 
 #   Plot results and save charts
-    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
-    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
-    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
-    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
+#    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
+#    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
+#    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
+#    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
 
 
 #   Write results to Excel spreadsheet for the shear hell of it
-    writer = ExcelWriter(EXCEL_RESULT_STORE)
-    open_source_licence.to_excel(writer,'opensource')
-    universities.to_excel(writer,'universities')
-    unique_rootdomains.to_excel(writer,'rootdomain')
-    year_of_return.to_excel(writer,'returnyear')
-    url_df.to_excel(writer,'urlstatus')
-    url_status.to_excel(writer,'urlstatus_summ')
-    writer.save()
+#    writer = ExcelWriter(EXCEL_RESULT_STORE)
+#    open_source_licence.to_excel(writer,'opensource')
+#    universities.to_excel(writer,'universities')
+#    unique_rootdomains.to_excel(writer,'rootdomain')
+#    year_of_return.to_excel(writer,'returnyear')
+ #   url_df.to_excel(writer,'urlstatus')
+ #   url_status.to_excel(writer,'urlstatus_summ')
+ #   writer.save()
 
 
 if __name__ == '__main__':
