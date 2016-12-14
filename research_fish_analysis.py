@@ -28,6 +28,10 @@ def import_xls_to_df(filename, name_of_sheet):
     :params: get an xls file and a sheetname from that file
     :return: a df
     """
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Importing data...')
+
     return pd.read_excel(filename,sheetname=name_of_sheet)
 
 
@@ -37,6 +41,9 @@ def add_column(dataframe,newcol):
     :params: a dataframe and column name
     :return: a dataframe with a new column
     """
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Adding a column...')
     dataframe[newcol] = np.nan
     return dataframe
 
@@ -49,48 +56,46 @@ def clean_data(dataframe,colname):
     3. Removes years before 2012. Only 2012-2016 are reliable enough to include in the study
     4. Removes years that include text (i.e. "Pre-2016") because it's ambiguous
     5. Drops any years that include NaN in the year category
-
-    5. Removes 'Type of tech product' that shouldn't have been included in the original data we were given. Only 'Software', 'Grid Application',
-    'e-Business Platform' and 'Webtool/Application' should have been included.
     :params: a dataframe and a colname of the column in which the years are stored
     :return: a dataframe with only int years and NaNs
     """
-#   Set up logging
+    # Set up logging
     logger = logging.getLogger(__name__)
+    logger.info('Cleaning data...')
     
-#   Want some metrics on how many records are being dropped. Set up a variable to store length of dataframe before each cleaning operation
+    # Want some metrics on how many records are being dropped. Set up a variable to store length of dataframe before each cleaning operation
     length_start = len(dataframe)
 
-#   Drop all outputs that aren't related to the four products that are classed as software
+    # Drop all outputs that aren't related to the four products that are classed as software
     dataframe = dataframe[(dataframe['Type of Tech Product'] == 'Software') | (dataframe['Type of Tech Product'] == 'Grid Application') | (dataframe['Type of Tech Product'] == 'e-Business Platform') | (dataframe['Type of Tech Product'] == 'Webtool/Application')]
 
     length_tech_product = len(dataframe)
     
-#   Remove duplicate entries where duplication occurs in the 'Impact' AND the 'Tech Product' fields
+    # Remove duplicate entries where duplication occurs in the 'Impact' AND the 'Tech Product' fields
     dataframe.drop_duplicates(subset = ['Tech Product'], keep = 'first', inplace = True)
 
     length_dupes = len(dataframe)
     
-#   Remove data from years where EPSRC are less certain that the data is accurate
+    # Remove data from years where EPSRC are less certain that the data is accurate
     lost_years = ['2006', '2007', '2008', '2009', '2010', '2011']
     for year in lost_years:
         dataframe.drop(dataframe[dataframe[colname] == year].index, inplace = True)
 
     length_years = len(dataframe)
     
-#   Go through the rows, if you can't convert the year into an int (i.e. the entry includes the text "Pre-"), write a NaN back into the dataframe 
+    # Go through the rows, if you can't convert the year into an int (i.e. the entry includes the text "Pre-"), write a NaN back into the dataframe 
     for i, row in dataframe.iterrows():
         try:
             int(dataframe[colname][i])
         except:
             dataframe[colname][i] = np.nan
     
-#   Drop any data which lacks a info on Year First Provided because we're unsure of its provenance
+    # Drop any data which lacks a info on Year First Provided because we're unsure of its provenance
     dataframe.dropna(subset=[colname], inplace=True)
     
     length_final = len(dataframe)
 
-#   Print details on the changes to the dataframe length during cleaning
+    # Print details on the changes to the dataframe length during cleaning
     logger.info("Records dropped during tech product cleaning: " + repr(length_start - length_tech_product))
     logger.info("Records dropped during duplicate cleaning: " + repr(length_tech_product - length_dupes))
     logger.info("Records dropped when cleaning years outside 2012-2016: " + repr(length_dupes - length_years))       
@@ -107,10 +112,13 @@ def produce_count(dataframe, colname):
     :params: a data frame and a column name in the dataframe
     :return: a table of unique names and their count
     """
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Producing a count...')    
     
     dataframe = pd.DataFrame(dataframe[colname].value_counts())
     
-#   Add a column for percentages
+    # Add a column for percentages
     dataframe['percentage'] = dataframe[colname]/dataframe[colname].sum()
     
     return dataframe
@@ -125,16 +133,19 @@ def produce_count_and_na(dataframe, colname):
     :params: a data frame and a column name in the dataframe
     :return: a table of unique names and their count
     """
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Producing a count and including na...')
 
-#   Employ special measures as discussed above for 'Open Source?' field
+    # Employ special measures as discussed above for 'Open Source?' field
     if colname == 'Open Source?':
         temp_dataframe = dataframe[dataframe['Type of Tech Product'] == 'Software']
         dataframe = pd.DataFrame(temp_dataframe[colname].value_counts(dropna = False))
-#        pd.DataFrame(dataframe[(dataframe['Tech Product'] == 'Software') & (dataframe[colname])].value_counts(dropna = False))
+    # pd.DataFrame(dataframe[(dataframe['Tech Product'] == 'Software') & (dataframe[colname])].value_counts(dropna = False))
     else:
         dataframe = pd.DataFrame(dataframe[colname].value_counts(dropna = False))
 
-#   Add a column for percentages
+    # Add a column for percentages
     dataframe['percentage'] = dataframe[colname]/dataframe[colname].sum()
 
     return dataframe
@@ -147,19 +158,30 @@ def get_root_domains(dataframe,colname):
     :params: a data frame and a column name in the dataframe
     :return: a new df of URL netlocs
     """
-#   initialise list
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Getting root domains...')
+    
+    # initialise list
     list_of_rootdomains = list()
     
-#   Take the colname column of df, strip out the nans (which break urlparser) and add it to urls
+    # Take the colname column of df, strip out the nans (which break urlparser) and add it to urls
     urls = dataframe[colname].dropna()
 
-#   User urlparse() to strip out the rootdomain (i.e, netloc) and write it to a list
+    logger.info('This many URLs found: ' + str(len(urls)))
+
+    # User urlparse() to strip out the rootdomain (i.e, netloc) and write it to a list
     for i in urls:
         current_url = urlparse(i)
         list_of_rootdomains.append(current_url.netloc)
 
-#   Convert the list into a df so we can use the same functions as are being used to summarise other data
+    # Convert the list into a df so we can use the same functions as are being used to summarise other data
     dataframeurl = pd.DataFrame({'rootdomains': list_of_rootdomains})
+
+    logger.info('This many rootdomains found: ' + str(len(dataframeurl)))
+
+    logger.info('This many unique rootdomains found: ' + str(len(dataframeurl.rootdomains.unique())))
+
     return dataframeurl
 
 
@@ -171,8 +193,12 @@ def plot_bar_charts(dataframe,filename,title,xaxis,yaxis,truncate):
     rows plotted (unless it's 0 at which point all rows are plotted)
     :return: Nothing, just prints a chart
     """
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Plotting charts...')
+    
     if truncate > 0:
-#       This cuts the dataframe down to the number of rows given in truncate
+        # This cuts the dataframe down to the number of rows given in truncate
         dataframe = dataframe.ix[:truncate]
 
     dataframe.plot(kind='bar', legend=None)
@@ -181,7 +207,7 @@ def plot_bar_charts(dataframe,filename,title,xaxis,yaxis,truncate):
         plt.xlabel(xaxis)
     if yaxis != None:
         plt.ylabel(yaxis)
-#   This provides more space around the chart to make it prettier        
+    # This provides more space around the chart to make it prettier        
     plt.tight_layout(True)
     plt.savefig(CHART_STORE_DIR + filename + '.png', format = 'png', dpi = 150)
     plt.show()
@@ -194,13 +220,17 @@ def impact_to_txt(dataframe,colname):
     :params: a dataframe and a column (colname) containing impact statements
     :return: write a text file containing all impact statements combined
     """
-#   Don't want any of the NaNs, so drop them
-    dataframe.dropna(subset=[colname], inplace=True)
-#   Open file for writing
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Creating impact text file...')
+    
+    # Don't want any of the NaNs, so drop them
+    impact_dataframe = dataframe.dropna(subset=[colname])
+    # Open file for writing
     file_for_impacts = open(IMPACT_RESULT_STORE, 'w')
-#   Go through dataframe row by row and write the text from the colname column to as a separate line to the text file
-    for i, row in dataframe.iterrows():
-        file_for_impacts.write("%s\n" % dataframe[colname][i])
+    # Go through dataframe row by row and write the text from the colname column to as a separate line to the text file
+    for i, row in impact_dataframe.iterrows():
+        file_for_impacts.write("%s\n" % impact_dataframe[colname][i])
     return
     
     
@@ -212,23 +242,33 @@ def check_url_status(dataframe, colname, statuscol):
     URL status will be recorded
     :return: a dataframe with the status of the URLs recorded in a column
     """
-#   Don't want any of the NaNs, so drop the rows in which NaN was entered for the URL
+    # Set up logging
+    logger = logging.getLogger(__name__)
+    logger.info('Checking URLs...')
+    
+    # Don't want any of the NaNs, so drop the rows in which NaN was entered for the URL
     dataframe.dropna(subset=[colname], inplace=True)
 
     h = httplib2.Http()
-    for i, row in dataframe.iterrows():
-#        print(dataframe[statuscol][i])
-        if math.isnan(dataframe[statuscol][i]) == True:
-            try:
-                print("Checking " + dataframe[colname][i])
-                response, content = h.request(dataframe[colname][i])
-                if response.status < 400:
-                    dataframe[statuscol][i] = response['date']
-#                    print(response['status'])
-#                    print(response['date'])
-            except: 
-                pass
-                dataframe[statuscol][i] = "No response"
+    for i, row in dataframe.iterrows():    
+        try:
+            print("Checking " + dataframe[colname][i])
+            response, content = h.request(dataframe[colname][i])
+            if response.status < 400:
+                dataframe[statuscol][i] = response['date']
+        except: 
+            dataframe[statuscol][i] = 'No response'
+
+    #When the URL checker times out without an error, it skips to the next URL and leave a blank in the statuscol
+    # which I want replaced with a 'No response' to making counting easier
+    dataframe[statuscol] = dataframe[statuscol].fillna('No response')
+    
+    #Record no. of dead sites
+    dead_sites = len(dataframe[dataframe[statuscol] == 'No response'])
+    
+    #Log how many dead URLs were found
+    logger.info('This many dead URLs found: ' + str(dead_sites))
+    
     return dataframe
 
 def main():
@@ -236,7 +276,7 @@ def main():
     Main function to run program
     """
     
-#   Set up logging
+    # Set up logging
     logging.basicConfig(level=logging.DEBUG)
     logger = logging.getLogger(__name__)
     handler = logging.FileHandler(LOGGERLOCATION)
@@ -248,60 +288,62 @@ def main():
     logger.addHandler(handler)
 
     logger.info('Starting...')
-#    logger.debug('Does this go to the screen?') 
     
-#   I write back to the original dataframe and pandas warns about that, so turning off the warning    
+    # I write back to the original dataframe and pandas warns about that, so turning off the warning    
     pd.options.mode.chained_assignment = None 
 
     
-#   Import dataframe from original xls
+    # Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME, DATASHEETNAME)
+
+    print(len(df))
 
     logger.info('Raw dataframe length before any processing: ' + repr(len(df)))
 
-#   Add a column for URL pinging response
+    # Add a column for URL pinging response
     add_column(df,'URL status')
 
-#   Clean the dataframe
+    # Clean the dataframe
     df = clean_data(df,'Year First Provided')
-
-#   Get a list of rootdomains (i.e. netloc) of URLs
+    
+    # Get a list of rootdomains (i.e. netloc) of URLs
     rootdomainsdf = get_root_domains(df,'URL')
 
-#   Adds data into df about status of the URL at which software is stored
-#    url_check = check_url_status(df,'URL','URL status')
-#    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
+    # Adds data into df about status of the URL at which software is stored
+    url_check = check_url_status(df,'URL','URL status')
+    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
     
-#   Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
+    # Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
     open_source_licence.index = open_source_licence.index.fillna('No response')
     universities = produce_count_and_na(df,'RO')
     unique_rootdomains = produce_count_and_na(rootdomainsdf,'rootdomains')
     year_of_return = produce_count(df,'Year First Provided')
     url_status = produce_count(df,'URL status')
-#   Want this to be sorted in year order rather than in order of largest count
+
+    # Want this to be sorted in year order rather than in order of largest count
     year_of_return.sort_index(inplace = True)
 
-#   Collate all impact statements into a text file for later word cloud generation
+    # Collate all impact statements into a text file for later word cloud generation
     impact_to_txt(df,'Impact')
 
+    # Plot results and save charts
+    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
+    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
+    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
+    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
 
-#   Plot results and save charts
-#    plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
-#    plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
-#    plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
-#    plot_bar_charts(year_of_return,'returnyear','When was output first registered?',None,'No. of outputs',0)
 
-
-#   Write results to Excel spreadsheet for the shear hell of it
-#    writer = ExcelWriter(EXCEL_RESULT_STORE)
-#    open_source_licence.to_excel(writer,'opensource')
-#    universities.to_excel(writer,'universities')
-#    unique_rootdomains.to_excel(writer,'rootdomain')
-#    year_of_return.to_excel(writer,'returnyear')
- #   url_df.to_excel(writer,'urlstatus')
- #   url_status.to_excel(writer,'urlstatus_summ')
- #   writer.save()
+    # Write results to Excel spreadsheet for the shear hell of it
+    writer = ExcelWriter(EXCEL_RESULT_STORE)
+    open_source_licence.to_excel(writer,'opensource')
+    universities.to_excel(writer,'universities')
+    unique_rootdomains.to_excel(writer,'rootdomain')
+    year_of_return.to_excel(writer,'returnyear')
+    url_df.to_excel(writer,'urlstatus')
+    url_status.to_excel(writer,'urlstatus_summ')
+    df.to_excel(writer,'Resulting_df')
+    writer.save()
 
 
 if __name__ == '__main__':
