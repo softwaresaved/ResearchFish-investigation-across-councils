@@ -4,6 +4,14 @@ I completed the first draft of the article about the ResearchFish data and sent 
 
 Ben identified some issues with the data I had been given, and a couple of issues with the methodology. I agreed to adapt and repeat the analysis, edit the post and send it to him for review. His comments were:
 
+## Updates
+* 12 Dec 16 - Issue 5 (duplicates) sorted
+* 13 Dec 16 - Issue 1 (wrong tech products) sorted
+* 13 Dec 16 - Issue 2 (open source only for tech products of Software type) sorted
+* 13 Dec 16 - Issue 6 (reduce range of years) sorted
+
+## Issues
+
 1. Some of the 'Type of Tech Product' (TOTP) included in the original data set do not relate to software!
 
   * The original data contained the TOTPs: Detection Devices, e-Business Platform, Grid Application, New Material/Compound, New/Improved Technique/Technology, Physical Model/Kit, Software, Systems, Materials & Instrumental Engineering, Systems, Materials &amp; Instrumental Engineering, and Webtool/Application
