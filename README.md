@@ -12,6 +12,7 @@ The main directory contains:
 
 The data directory contains:
 
+1. "softwareandtechnicalproductsearch-1481901871545.csv": A csv file downloaded by Simon Hettrick from Gateway to Research on 16 December 2016. This contains all "Software and Technical Products" research outputs
 1. "Software&TechnicalProducts - ResearchFish.xlsx": around 1600 software outputs sent to us on 17 November 2016 by Louise Tillman from the EPSRC.
 1. "researchfish_results.xlsx": results from the analysis
 1. "impact.txt": all of the outputs' impact statements merged into a single text file for easy loading into a word frewquency counter
