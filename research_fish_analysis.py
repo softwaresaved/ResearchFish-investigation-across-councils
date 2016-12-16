@@ -14,8 +14,11 @@ import httplib2
 import logging
 
 
-DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
-DATASHEETNAME = "Software_TechnicalProducts"
+#DATAFILENAME = "./data/Software&TechnicalProducts - ResearchFish.xlsx"
+#DATASHEETNAME = "Software_TechnicalProducts"
+DATAFILENAME = "./data/softwareandtechnicalproductsearch-1481901871545.xlsx"
+DATASHEETNAME = "softwareandtechnicalproductsear"
+
 CHART_STORE_DIR = "./charts/"
 EXCEL_RESULT_STORE = "./data/researchfish_results.xlsx"
 IMPACT_RESULT_STORE = "./data/impact.txt"
@@ -48,7 +51,7 @@ def add_column(dataframe,newcol):
     return dataframe
 
 
-def clean_data(dataframe,colname):
+def clean_data(dataframe,colname1,colname2):
     """
     Cleans the dataframe based on advice we have been given by EPSRC:
     1. Remove the tech products that don't actually relate to software
@@ -63,18 +66,31 @@ def clean_data(dataframe,colname):
     logger = logging.getLogger(__name__)
     logger.info('Cleaning data...')
     
+    #Find appropriate column title, which varies dependent on data source
+    if colname1 in dataframe.columns:
+        colname = colname1
+        type_of_tech_col = 'Type of Tech Product'
+        tech_col = 'Tech Product'
+    else:
+        colname = colname2
+        type_of_tech_col = 'Type of Technology'
+        tech_col = 'Outcome Title'
+
+
     # Want some metrics on how many records are being dropped. Set up a variable to store length of dataframe before each cleaning operation
     length_start = len(dataframe)
 
     # Drop all outputs that aren't related to the four products that are classed as software
-    dataframe = dataframe[(dataframe['Type of Tech Product'] == 'Software') | (dataframe['Type of Tech Product'] == 'Grid Application') | (dataframe['Type of Tech Product'] == 'e-Business Platform') | (dataframe['Type of Tech Product'] == 'Webtool/Application')]
+    dataframe = dataframe[(dataframe[type_of_tech_col] == 'Software') | (dataframe[type_of_tech_col] == 'Grid Application') | (dataframe[type_of_tech_col] == 'e-Business Platform') | (dataframe[type_of_tech_col] == 'Webtool/Application')]
 
     length_tech_product = len(dataframe)
     
     # Remove duplicate entries where duplication occurs in the 'Impact' AND the 'Tech Product' fields
-    dataframe.drop_duplicates(subset = ['Tech Product'], keep = 'first', inplace = True)
+    dataframe.drop_duplicates(subset = [tech_col], keep = 'first', inplace = True)
 
     length_dupes = len(dataframe)
+
+    print(dataframe[colname][2])
     
     # Remove data from years where EPSRC are less certain that the data is accurate
     lost_years = ['2006', '2007', '2008', '2009', '2010', '2011']
@@ -304,14 +320,14 @@ def main():
     add_column(df,'URL status')
 
     # Clean the dataframe
-    df = clean_data(df,'Year First Provided')
+    df = clean_data(df,'Year First Provided','Year Produced')
     
     # Get a list of rootdomains (i.e. netloc) of URLs
     rootdomainsdf = get_root_domains(df,'URL')
 
     # Adds data into df about status of the URL at which software is stored
-    url_check = check_url_status(df,'URL','URL status')
-    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
+#    url_check = check_url_status(df,'URL','URL status')
+#    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
     
     # Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
     open_source_licence = produce_count_and_na(df,'Open Source?')
@@ -340,8 +356,8 @@ def main():
     universities.to_excel(writer,'universities')
     unique_rootdomains.to_excel(writer,'rootdomain')
     year_of_return.to_excel(writer,'returnyear')
-    url_df.to_excel(writer,'urlstatus')
-    url_status.to_excel(writer,'urlstatus_summ')
+#    url_df.to_excel(writer,'urlstatus')
+#    url_status.to_excel(writer,'urlstatus_summ')
     df.to_excel(writer,'Resulting_df')
     writer.save()
 
