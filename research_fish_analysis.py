@@ -38,6 +38,17 @@ def import_xls_to_df(filename, name_of_sheet):
     return pd.read_excel(filename,sheetname=name_of_sheet)
 
 
+def change_names(dataframe):
+    '''
+    Changes the dataframe titles so that the code can handle data from two different sources
+    :params: a dataframe
+    :return: a dataframe with new column names
+    '''
+    dataframe.columns = ['Funding OrgName', 'File Reference', 'ProjectCategory', 'Outcome Type', 'RO', 'Department', 'PI Surname', 'PI Name', 'PI Orcid iD', 'Tech Product', 'Description', 'Type of Tech Product', 'Open Source?', 'Year First Provided', 'Impact', 'URL', 'GTR Outcome URL', 'GTRProjectUrl', 'ProjectId', 'FundingOrgId', 'LeadROId', 'PIId']
+
+    return dataframe
+
+
 def add_column(dataframe,newcol):
     """
     Adds a new column of NaNs called newcol
@@ -51,7 +62,7 @@ def add_column(dataframe,newcol):
     return dataframe
 
 
-def clean_data(dataframe,colname1,colname2):
+def clean_data(dataframe,colname):
     """
     Cleans the dataframe based on advice we have been given by EPSRC:
     1. Remove the tech products that don't actually relate to software
@@ -66,45 +77,33 @@ def clean_data(dataframe,colname1,colname2):
     logger = logging.getLogger(__name__)
     logger.info('Cleaning data...')
     
-    #Find appropriate column title, which varies dependent on data source
-    if colname1 in dataframe.columns:
-        colname = colname1
-        type_of_tech_col = 'Type of Tech Product'
-        tech_col = 'Tech Product'
-    else:
-        colname = colname2
-        type_of_tech_col = 'Type of Technology'
-        tech_col = 'Outcome Title'
-
-
     # Want some metrics on how many records are being dropped. Set up a variable to store length of dataframe before each cleaning operation
     length_start = len(dataframe)
 
     # Drop all outputs that aren't related to the four products that are classed as software
-    dataframe = dataframe[(dataframe[type_of_tech_col] == 'Software') | (dataframe[type_of_tech_col] == 'Grid Application') | (dataframe[type_of_tech_col] == 'e-Business Platform') | (dataframe[type_of_tech_col] == 'Webtool/Application')]
+    dataframe = dataframe[(dataframe['Type of Tech Product'] == 'Software') | (dataframe['Type of Tech Product'] == 'Grid Application') | (dataframe['Type of Tech Product'] == 'e-Business Platform') | (dataframe['Type of Tech Product'] == 'Webtool/Application')]
 
     length_tech_product = len(dataframe)
     
     # Remove duplicate entries where duplication occurs in the 'Impact' AND the 'Tech Product' fields
-    dataframe.drop_duplicates(subset = [tech_col], keep = 'first', inplace = True)
+    dataframe.drop_duplicates(subset = ['Tech Product'], keep = 'first', inplace = True)
 
     length_dupes = len(dataframe)
 
-    print(dataframe[colname][2])
+    # Go through the rows, if you can't convert the year into an int (i.e. the entry includes the text "Pre-"), write a NaN back into the dataframe 
+    for i, row in dataframe.iterrows():
+        try:
+#            int(dataframe[colname][i])
+            dataframe[colname][i] = int(dataframe[colname][i])
+        except:
+            dataframe[colname][i] = np.nan
     
     # Remove data from years where EPSRC are less certain that the data is accurate
-    lost_years = ['2006', '2007', '2008', '2009', '2010', '2011']
+    lost_years = [2006, 2007, 2008, 2009, 2010, 2011]
     for year in lost_years:
         dataframe.drop(dataframe[dataframe[colname] == year].index, inplace = True)
 
     length_years = len(dataframe)
-    
-    # Go through the rows, if you can't convert the year into an int (i.e. the entry includes the text "Pre-"), write a NaN back into the dataframe 
-    for i, row in dataframe.iterrows():
-        try:
-            int(dataframe[colname][i])
-        except:
-            dataframe[colname][i] = np.nan
     
     # Drop any data which lacks a info on Year First Provided because we're unsure of its provenance
     dataframe.dropna(subset=[colname], inplace=True)
@@ -157,7 +156,6 @@ def produce_count_and_na(dataframe, colname):
     if colname == 'Open Source?':
         temp_dataframe = dataframe[dataframe['Type of Tech Product'] == 'Software']
         dataframe = pd.DataFrame(temp_dataframe[colname].value_counts(dropna = False))
-    # pd.DataFrame(dataframe[(dataframe['Tech Product'] == 'Software') & (dataframe[colname])].value_counts(dropna = False))
     else:
         dataframe = pd.DataFrame(dataframe[colname].value_counts(dropna = False))
 
@@ -308,11 +306,12 @@ def main():
     # I write back to the original dataframe and pandas warns about that, so turning off the warning    
     pd.options.mode.chained_assignment = None 
 
-    
     # Import dataframe from original xls
     df = import_xls_to_df(DATAFILENAME, DATASHEETNAME)
 
-    print(len(df))
+    #Now have two sources of data. The one mentioned below has different col titles, so need to change them 
+    if DATAFILENAME == "./data/softwareandtechnicalproductsearch-1481901871545.xlsx":
+        df = change_names(df)
 
     logger.info('Raw dataframe length before any processing: ' + repr(len(df)))
 
@@ -320,7 +319,7 @@ def main():
     add_column(df,'URL status')
 
     # Clean the dataframe
-    df = clean_data(df,'Year First Provided','Year Produced')
+    df = clean_data(df,'Year First Provided')
     
     # Get a list of rootdomains (i.e. netloc) of URLs
     rootdomainsdf = get_root_domains(df,'URL')
@@ -330,6 +329,7 @@ def main():
 #    url_df = pd.concat([url_check['URL'], url_check['URL status']], axis=1, keys=['URL', 'URL status'])
     
     # Count the unique values in columns to get summaries of open/closed/no licence, which university released outputs, where outputs are being stored and in which year outputs were recorded
+    funding_council = produce_count_and_na(df,'Funding OrgName')
     open_source_licence = produce_count_and_na(df,'Open Source?')
     open_source_licence.index = open_source_licence.index.fillna('No response')
     universities = produce_count_and_na(df,'RO')
@@ -344,6 +344,7 @@ def main():
     impact_to_txt(df,'Impact')
 
     # Plot results and save charts
+    plot_bar_charts(funding_council,'researchcouncil','Software outputs by research council',None,'No. of outputs',0)
     plot_bar_charts(open_source_licence,'opensource','Is the output under an open-source licence?',None,'No. of outputs',0)
     plot_bar_charts(universities,'universities','Top 30 universities that register the most outputs',None,'No. of outputs',30)
     plot_bar_charts(unique_rootdomains,'rootdomain','30 most popular domains for storing outputs',None,'No. of outputs',30)
@@ -352,6 +353,7 @@ def main():
 
     # Write results to Excel spreadsheet for the shear hell of it
     writer = ExcelWriter(EXCEL_RESULT_STORE)
+    funding_council.to_excel(writer,'researchcouncil')
     open_source_licence.to_excel(writer,'opensource')
     universities.to_excel(writer,'universities')
     unique_rootdomains.to_excel(writer,'rootdomain')
