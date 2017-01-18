@@ -17,11 +17,14 @@ The main directory contains:
 The data directory contains:
 
 1. "researchfish_results.xlsx": results from the analysis
-1. "impact.txt": all of the outputs' impact statements merged into a single text file for easy loading into a word frewquency counter
+1. "impact.txt": all of the outputs' impact statements merged into a single text file for easy loading into a word frequency counter
 
 Where is the data?
 
 I was asked not to release the data that I used in this study. There are two options if you would like to reproduce the analysis. The first is to go to Gateway to Research and download the appropriate research outcomes for yourself, the second is to wait for my second post on this subject which will include the data relating to research outcomes from all Research Councils.
+
+The charts directory contains png images of the charts produced by the analysis.
+The venv directory is used by the virtual environment.
 
 ## Requirements
 
@@ -29,16 +32,13 @@ The code runs on Python 3.5.
 
 The code runs in a virtual environment which can be installed [following this guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
 
-Inside the virtual environment, intall the libraries by running the command:
+Inside the virtual environment, install the libraries by running the command:
 
     pip install -r requirements.txt
 
 Once they're installed, run the code with the command:
 
     python research_fish_analysis.py
-
-The charts directory contains png images of the charts produced by the analysis.
-The venv directory is used by the virtual environment.
 
 ## About the data
 
