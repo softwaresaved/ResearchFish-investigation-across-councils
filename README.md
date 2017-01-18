@@ -1,8 +1,12 @@
-# ResearchFish
+# ResearchFish investigation
 
-## Running the analysis
+# Purpose
 
-The code runs in a virtual environment which can be installed [following this guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+This code analyses research outcomes provided by the EPSRC (but also available on Gateway to Research) to investigate some aspects of the outcomes: the number, the universities who register them, where the software is stored, whether it's stored under an open licence, and whether the URL linked to the storage is live.
+
+The results of the investigation will be published on the Software Sustainability Institute's website under the title: "Researchfish®: what can it tell us about software in research?".
+
+# Files
 
 The main directory contains:
 
@@ -12,9 +16,26 @@ The main directory contains:
 
 The data directory contains:
 
-1. "Software&TechnicalProducts - ResearchFish.xlsx": around 1600 software outputs sent to us on 17 November 2016 by Louise Tillman from the EPSRC.
 1. "researchfish_results.xlsx": results from the analysis
 1. "impact.txt": all of the outputs' impact statements merged into a single text file for easy loading into a word frewquency counter
+
+Where is the data?
+
+I was asked not to release the data that I used in this study. There are two options if you would like to reproduce the analysis. The first is to go to Gateway to Research and download the appropriate research outcomes for yourself, the second is to wait for my second post on this subject which will include the data relating to research outcomes from all Research Councils.
+
+## Requirements
+
+The code runs on Python 3.5.
+
+The code runs in a virtual environment which can be installed [following this guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
+
+Inside the virtual environment, intall the libraries by running the command:
+
+    pip install -r requirements.txt
+
+Once they're installed, run the code with the command:
+
+    python research_fish_analysis.py
 
 The charts directory contains png images of the charts produced by the analysis.
 The venv directory is used by the virtual environment.
