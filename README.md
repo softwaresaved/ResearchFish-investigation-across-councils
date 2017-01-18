@@ -52,3 +52,7 @@ Louise describes the content as:
 * Either optional or not possible after that (most EP grants >6 yrs old ‘closed’, but could be re-opened on request).
 
 So I think the earliest start date of the grants in the data set is 2006.The newest grants (i.e. those that have only just been funded / a year or so in) are not asked to submit outcomes immediately as that would not be realistic."
+
+## Troubleshooting
+
+Sometimes the URL checker hangs on a URL. Hit ctrl+ c to skip the URL.
