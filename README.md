@@ -4,7 +4,7 @@
 
 This code analyses research outcomes provided by the EPSRC (but also available on Gateway to Research) to investigate some aspects of the outcomes: the number, the universities who register them, where the software is stored, whether it's stored under an open licence, and whether the URL linked to the storage is live.
 
-The results of the investigation will be published on the Software Sustainability Institute's website under the title: "Researchfish®: what can it tell us about software in research?".
+The results of the investigation will be published on the Software Sustainability Institute's website under the title: "[Researchfish®: what can it tell us about software in research?](https://www.software.ac.uk/blog/2017-01-18-researchfishr-what-can-it-tell-us-about-software-research)".
 
 # Files
 
