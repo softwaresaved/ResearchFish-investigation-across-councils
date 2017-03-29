@@ -1,4 +1,4 @@
-Here's a list of the things I'm interested in looking at. If you would like to do some analysis of this data, please let me (Simon) know.
+Here's the original list of the things I was interested in looking at. Some of these questions have been [answered in my original post](https://www.software.ac.uk/blog/2017-01-18-researchfishr-what-can-it-tell-us-about-software-research).
 
 1. Rate at which outputs are being relased over the years (bar chart). Are software outputs becoming more popular?
 2. Open/closed/none licences (Pie or stacked bar). Are people licensing their software? Is it changing over the years?
@@ -11,3 +11,11 @@ And maybe, with some more development:
 6. Is repo alive. We can ping it, but a more comprehensive test would be better.
 7. Do licence, citation, etc. type of files exist? (Open Source Health Check maybe?)
 8. Search for research domain infomation, put together a list of software used in particular domains, and then publish that list to aid re-use.
+
+In the next stage of the project, I'm also looking to answer some of the follow up questions as [summarised in my original post](https://www.software.ac.uk/blog/2017-01-18-researchfishr-what-can-it-tell-us-about-software-research).
+
+"This first pass at the Researchfish® data has raised a few questions. Why do researchers at some universities appear more willing to record outcomes than others? Are 7% of the outcomes really not licensed? What licences are being used? Where can we find the software from the 30% of outcomes that were provided without a URL? Can we actually get our hands on the software at the live URLs? And the big question, of course, do these outcomes in any way reflect the software that is being developed by researchers?
+
+Throughout this year I’ll take a look at answering some of these questions, which should shed light on the use of research software in the UK (and improve my knowledge of Python). I’ll also look to normalise some of the outcomes against size of the university, or the amount of funding it attracts. I’ve just downloaded the data for all Research Councils, so my next post will take a look at how outcomes vary in relation to research funder.
+
+Ultimately, I’m interested in developing advice that will help more researchers record their software outcomes and, I hope, make them available to others."
