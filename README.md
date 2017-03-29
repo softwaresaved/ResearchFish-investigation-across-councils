@@ -16,6 +16,7 @@ The main directory contains:
 
 The data directory contains:
 
+1. softwareandtechnicalproductsearch-1490799160221.csv: a csv file downloaded on 29 March 2017 from [Gateway to Research from the outcomes page](http://gtr.rcuk.ac.uk/search/outcomes?term=*&page=1&fetchSize=25&fields=pro.gr,pro.t,pro.a,pro.orcidId,per.fn,per.on,per.sn,per.fnsn,per.orcidId,per.org.n,per.pro.t,per.pro.abs,pub.t,pub.a,pub.orcidId,org.n,org.orcidId,acp.t,acp.d,acp.i,acp.oid,kf.d,kf.oid,is.t,is.d,is.oid,col.i,col.d,col.c,col.dept,col.org,col.pc,col.pic,col.oid,ip.t,ip.d,ip.i,ip.oid,pol.i,pol.gt,pol.in,pol.oid,prod.t,prod.d,prod.i,prod.oid,rtp.t,rtp.d,rtp.i,rtp.oid,rdm.t,rdm.d,rdm.i,rdm.oid,stp.t,stp.d,stp.i,stp.oid,so.t,so.d,so.cn,so.i,so.oid,ff.t,ff.d,ff.c,ff.org,ff.dept,ff.oid,dis.t,dis.d,dis.i,dis.oid&type=softwareandtechnicalproduct&selectedFacets=#). This includes all outcomes registered on the site within the "software" categories: E-business platform, Grid application, Software and Webtool/application.
 1. "researchfish_results.xlsx": results from the analysis
 1. "impact.txt": all of the outputs' impact statements merged into a single text file for easy loading into a word frequency counter
 
